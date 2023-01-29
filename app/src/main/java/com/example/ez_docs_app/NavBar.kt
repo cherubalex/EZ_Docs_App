@@ -6,9 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -24,6 +22,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.ez_docs_app.ui.theme.Purple200
+import com.example.ez_docs_app.ui.theme.Purple500
 
 // Lien intéressant sur "Arrangement" :
 //  https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/Arrangement
@@ -47,8 +47,8 @@ class NavBarElementDescriptor(title : String, navigationDest : String, icon : Im
 //Permet d'obtenir une couleur si l'élément est sélectionné (ou pas).
 @Composable
 fun getColorForSelection(selected : Boolean) : Color {
-    if(selected) return MaterialTheme.colors.onPrimary      //Sélectionné
-    return MaterialTheme.colors.primary                     //Pas sélectionné
+    if(selected) return Purple500           //Sélectionné
+    return Purple200                        //Pas sélectionné
 }
 
 ///////////////////////////
@@ -58,14 +58,11 @@ fun getColorForSelection(selected : Boolean) : Color {
 // Créé une surface avec un arrière-plan transparent
 // puis ajoute sur cette surface la barre de navigation en elle-même (NavBarContent())
 @Composable
-fun navBar(navController : NavHostController, content : List<NavBarElementDescriptor>) {
+fun navBarSurface(navController : NavHostController, content : List<NavBarElementDescriptor>) {
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
     val screenHeight = configuration.screenHeightDp
     val paddingOnSides = 20
-
-    //Stocke le nom de la destination cliqué la plus récemment (premier élément de la liste par défaut)
-    var selectedElem = remember { mutableStateOf(content[0].elementDest) }
 
     //La surface permet de superposer la navbar au-dessus de tout le reste
     Surface (
@@ -74,19 +71,33 @@ fun navBar(navController : NavHostController, content : List<NavBarElementDescri
         color = Color.Transparent   //La surface a un arrière-plan transparent
     ) {
         //Ajouter la NavBar en elle-même sur la surface
-        navBarShape(screenWidth) {
-            for(element in content) {
-                //Ajouter tous les éléments un par un
-                navBarItem(
-                    navBarElem = element,   //Obtenir le titre de l'élément
-                    //Déterminer la couleur de l'élément à partir de
-                    backgroundCol = getColorForSelection(element.elementDest == selectedElem.value),
-                    //Si l'élément est clické, il faut naviguer vers la destination
-                    onclick = {
-                        selectedElem.value = element.elementDest        //stocker l'élément sélectionné
-                        navController.navigate(element.elementDest)     //changer de page
-                    })
-            }
+        navBar(navController = navController, content = content)
+    }
+}
+
+//Pour être utilisé dans un Scaffold
+@Composable
+fun navBar(navController : NavHostController, content : List<NavBarElementDescriptor>) {
+    val configuration = LocalConfiguration.current
+    val screenWidth = configuration.screenWidthDp
+
+    //Stocke le nom de la destination cliqué la plus récemment (premier élément de la liste par défaut)
+    var selectedElem = remember { mutableStateOf(content[0].elementDest) }
+
+
+    navBarShape(screenWidth) {
+        for(element in content) {
+            //Ajouter tous les éléments un par un
+            navBarItem(
+                navBarElem = element,   //Obtenir le titre de l'élément
+                //Déterminer la couleur de l'élément à partir de
+                backgroundCol = getColorForSelection(element.elementDest == selectedElem.value),
+                //Si l'élément est clické, il faut naviguer vers la destination
+                onclick = {
+                    selectedElem.value = element.elementDest        //stocker l'élément sélectionné
+                    navController.navigate(element.elementDest)     //changer de page
+                }
+            )
         }
     }
 }
@@ -103,7 +114,7 @@ fun navBarShape(screenWidth : Int, content: @Composable () -> Unit) {
             .clip(CircleShape)
             .width((screenWidth - paddingOnSides / 2).dp)
             .height(navBarHeight.dp)
-            .background(MaterialTheme.colors.primary), //dynamicDarkColorScheme(LocalContext.current).primary
+            .background(Purple200),
     ) {
         Row(
             modifier = Modifier.fillMaxSize(),      //Faire en sorte que la ligne prenne tout l'espace
@@ -121,8 +132,8 @@ fun navBarItem(navBarElem : NavBarElementDescriptor, backgroundCol : Color, oncl
         modifier = Modifier
             .padding(5.dp)      //5 de chaque côté
             .clip(CircleShape)
-            .size((navBarHeight-10).dp)
-            .background(backgroundCol )
+            .size((navBarHeight - 10).dp)
+            .background(backgroundCol)
             .clickable { onclick() },
     ) {
         Column(
