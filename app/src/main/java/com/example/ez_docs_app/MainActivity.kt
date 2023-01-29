@@ -39,25 +39,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-
-    val configuration = LocalConfiguration.current
-    val screenwidth = configuration.screenWidthDp
-    val screenpadding = 100
-    Column() {
-        Text(text = "Hello $name!")
-        Box(
-            modifier = Modifier
-                .padding((screenpadding/2).dp)
-                .clip(CircleShape)
-                .width((screenwidth - 30).dp)
-                .height(40.dp)
-                .background(Color.Blue)
-
-        )
-
-    }
-
-
+    Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
