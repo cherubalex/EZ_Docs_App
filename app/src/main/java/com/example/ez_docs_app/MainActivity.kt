@@ -81,7 +81,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomePage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
-    //todo 2 : Actuellement une partie du contenu est caché par la navbar, même quand on scroll à fond.
     Column() {
         Column(
             modifier = Modifier
