@@ -33,6 +33,7 @@ import com.example.ez_docs_app.ui.theme.Purple500
 //Constances
 
 const val navBarHeight = 70
+const val navBarPaddingOnSides = 20     // 10 pixels de chaques côtés
 
 
 //////////////////////////////////////
@@ -62,12 +63,11 @@ fun navBarSurface(navController : NavHostController, content : List<NavBarElemen
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp
     val screenHeight = configuration.screenHeightDp
-    val paddingOnSides = 20
 
     //La surface permet de superposer la navbar au-dessus de tout le reste
     Surface (
         modifier = Modifier
-            .offset(x = 0.dp, y = (screenHeight - navBarHeight - paddingOnSides).dp), //déplacer la surface en bass de l'écran
+            .offset(x = 0.dp, y = (screenHeight - navBarHeight - navBarPaddingOnSides).dp), //déplacer la surface en bass de l'écran
         color = Color.Transparent   //La surface a un arrière-plan transparent
     ) {
         //Ajouter la NavBar en elle-même sur la surface
@@ -105,14 +105,13 @@ fun navBar(navController : NavHostController, content : List<NavBarElementDescri
 // Correspond au rectangle de la barre de navigation avec tout son contenu.
 @Composable
 fun navBarShape(screenWidth : Int, content: @Composable () -> Unit) {
-    val paddingOnSides = 20
 
     //L'élément "Box" correspond à la forme oval de la barre de navigation
     Box(
         modifier = Modifier
-            .padding((paddingOnSides / 2).dp)
+            .padding((navBarPaddingOnSides / 2).dp)
             .clip(CircleShape)
-            .width((screenWidth - paddingOnSides / 2).dp)
+            .width((screenWidth - navBarPaddingOnSides / 2).dp)
             .height(navBarHeight.dp)
             .background(Purple200),
     ) {
