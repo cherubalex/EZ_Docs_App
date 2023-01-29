@@ -88,6 +88,7 @@ fun HomePage(navController : NavHostController) {
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .weight(weight = 2f, fill = false)
+                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
         ) {
             for (i in 0..42) {
                 Text(text = "Accueil $i")
