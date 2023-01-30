@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -22,8 +23,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.ez_docs_app.ui.theme.Purple200
-import com.example.ez_docs_app.ui.theme.Purple500
 
 // Lien intéressant sur "Arrangement" :
 //  https://developer.android.com/reference/kotlin/androidx/compose/foundation/layout/Arrangement
@@ -48,8 +47,8 @@ class NavBarElementDescriptor(title : String, navigationDest : String, icon : Im
 //Permet d'obtenir une couleur si l'élément est sélectionné (ou pas).
 @Composable
 fun getColorForSelection(selected : Boolean) : Color {
-    if(selected) return Purple500           //Sélectionné
-    return Purple200                        //Pas sélectionné
+    if(selected) return MaterialTheme.colors.primaryVariant //Sélectionné
+    return MaterialTheme.colors.primary                     //Pas sélectionné
 }
 
 ///////////////////////////
@@ -113,7 +112,7 @@ fun navBarShape(screenWidth : Int, content: @Composable () -> Unit) {
             .clip(CircleShape)
             .width((screenWidth - navBarPaddingOnSides / 2).dp)
             .height(navBarHeight.dp)
-            .background(Purple200),
+            .background(MaterialTheme.colors.primary)
     ) {
         Row(
             modifier = Modifier.fillMaxSize(),      //Faire en sorte que la ligne prenne tout l'espace
@@ -141,9 +140,9 @@ fun navBarItem(navBarElem : NavBarElementDescriptor, backgroundCol : Color, oncl
             verticalArrangement = Arrangement.Center            //centrer verticalement
         ) {
             Icon(
-                navBarElem.elementIcon, contentDescription = null
+                navBarElem.elementIcon, contentDescription = null, tint = MaterialTheme.colors.onPrimary
             )
-            Text(navBarElem.elementTitle, fontSize = 12.sp)     //afficher le texte
+            Text(navBarElem.elementTitle, fontSize = 12.sp, color = MaterialTheme.colors.onPrimary)     //afficher le texte
         }
     }
 }
@@ -156,7 +155,7 @@ fun navBarItem(navBarElem : NavBarElementDescriptor, backgroundCol : Color, oncl
 fun navBarItemPreview() {
     navBarItem(
         navBarElem = NavBarElementDescriptor("Text", "idk", Icons.Default.Home),
-        backgroundCol = Color.White,
+        backgroundCol = MaterialTheme.colors.primary,
         onclick = {}
     )
 }
