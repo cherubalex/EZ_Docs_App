@@ -1,12 +1,10 @@
 package com.example.ez_docs_app
 
 import android.annotation.SuppressLint
-import android.icu.text.CaseMap.Title
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -23,9 +21,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.ez_docs_app.article.articlesIndex
+import com.example.ez_docs_app.article.getArticleWithName
 import com.example.ez_docs_app.ui.theme.EZ_Docs_AppTheme
 import com.example.ez_docs_app.ui.theme.Purple500
 import java.util.*
@@ -70,18 +72,24 @@ class MainActivity : ComponentActivity() {
                             composable("home") { HomePage(navController) }
                             composable("cours") { CoursPage(navController) }
                             composable("quiz") { QuizPage(navController) }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+
+                            composable("article/{nomArticle}",
+                                arguments = listOf(navArgument("nomArticle") { type = NavType.StringType })
+                            ) {
+                                ArticlePage(navController = navController, nomArticle = it.arguments?.getString("nomArticle"))
+                            }
+                        }   //Navhost
+                    }   //Surface
+                }   //Scaffold
+            }   //EZ_Docs_AppTheme
+        }   //setContent
+    }   //onCreate
+}   //class MainActivity
 
 @Composable
 fun HomePage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
-    Column() {
+    Column {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -96,16 +104,54 @@ fun HomePage(navController : NavHostController) {
     }
 }
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun CoursPage(navController : NavHostController) {
-    //todo : ajouter le vrai contenu
-    Text(text = "Cours")
+    Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .weight(weight = 2f, fill = false)
+                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
+        ) {
+            for(entry in articlesIndex) {
+                ListItem(
+                    text = { Text(entry.displayName) },
+                    modifier = Modifier.clickable {
+                        navController.navigate("article/${entry.internalName}")
+                    }
+                )
+                Divider()
+            }
+        }
+    }
 }
 
 @Composable
 fun QuizPage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
-    Text(text = "Pages")
+    Text(text = "Quiz (à faire)")
+}
+
+@Composable
+fun ArticlePage(navController : NavHostController, nomArticle : String?) {
+    Column {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .weight(weight = 2f, fill = false)
+                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
+        ) {
+            if(nomArticle.isNullOrBlank()) {
+                getArticleWithName("null").MakeComponent(navController)
+            }
+            else {
+                getArticleWithName(nomArticle).MakeComponent(navController)
+            }
+        }
+    }
 }
 
 @Composable
