@@ -12,7 +12,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -81,8 +81,7 @@ fun navBar(navController : NavHostController, content : List<NavBarElementDescri
     val screenWidth = configuration.screenWidthDp
 
     //Stocke le nom de la destination cliqué la plus récemment (premier élément de la liste par défaut)
-    var selectedElem = remember { mutableStateOf(content[0].elementDest) }
-
+    var selectedElem = rememberSaveable{ mutableStateOf(content[0].elementDest) }
 
     navBarShape(screenWidth) {
         for(element in content) {
