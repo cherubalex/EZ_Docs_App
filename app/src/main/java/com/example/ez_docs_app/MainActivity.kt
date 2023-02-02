@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
                             elevation = 4.dp,
                             backgroundColor = Purple500
                         ) {
-                            Text(text = "hello", fontSize = 24.sp)
+                            Text(text = "EZ-Docs", fontSize = 24.sp)
                         }
                     },
                     bottomBar = {
