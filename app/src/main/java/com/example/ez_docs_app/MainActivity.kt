@@ -116,6 +116,7 @@ fun CoursPage(navController : NavHostController) {
                 .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
         ) {
             for(entry in articlesIndex) {
+                //https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#ListItem(androidx.compose.ui.Modifier,kotlin.Function0,kotlin.Function0,kotlin.Boolean,kotlin.Function0,kotlin.Function0,kotlin.Function0)
                 ListItem(
                     text = { Text(entry.displayName) },
                     modifier = Modifier.clickable {

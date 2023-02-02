@@ -112,6 +112,7 @@ fun navBarShape(screenWidth : Int, content: @Composable () -> Unit) {
             .width((screenWidth - navBarPaddingOnSides / 2).dp)
             .height(navBarHeight.dp)
             .background(MaterialTheme.colors.primary)
+            .clickable(enabled = false, onClick = { /* rien */ })       //faire en sorte que l'on ne puisse pas clicker sur ce qu'il y a derrière la navbar
     ) {
         Row(
             modifier = Modifier.fillMaxSize(),      //Faire en sorte que la ligne prenne tout l'espace
