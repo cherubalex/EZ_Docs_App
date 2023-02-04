@@ -60,7 +60,7 @@ fun getColorForSelection(selected : Boolean) : Color {
 @Composable
 fun navBarSurface(navController : NavHostController, content : List<NavBarElementDescriptor>) {
     val configuration = LocalConfiguration.current
-    val screenWidth = configuration.screenWidthDp
+    //val screenWidth = configuration.screenWidthDp
     val screenHeight = configuration.screenHeightDp
 
     //La surface permet de superposer la navbar au-dessus de tout le reste
