@@ -13,9 +13,11 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 
+//text correspond au texte afficher dans l'article
+//link correspond à la destination envoyé au NavHostController quand le lien est clické
 class HyperlinkObject(val text : String, val link : String) {
-    fun calculateStringLenght() : Int {
-        return  text.length + link.length + 4   // 4 : "{}[]"
+    fun calculateRawStringLenght() : Int {
+        return  text.length + link.length + 4   // 4 : "[]()"
     }
 }
 
@@ -30,22 +32,22 @@ fun searchCharFrom(s : String, c : Char, startIndex : Int) : Int {
     return -1
 }
 
-// Traiter un lien interactif de la forme "... {}[] ..."
+// Traiter un lien interactif de la forme "... []() ..."
 // startIndex doit correspondre à l'index de '{' dans la chaine.
 fun parseHyperLink(s: String, startIndex : Int) : HyperlinkObject? {
-    if(s[startIndex] != '{') {
+    if(s[startIndex] != '[') {
         return null
     }
 
-    val textEndIndex = searchCharFrom(s, '}', startIndex+1)
+    val textEndIndex = searchCharFrom(s, ']', startIndex+1)
     if(textEndIndex == -1) {
         return null
     }
 
-    if(s[textEndIndex+1] != '[') {
+    if(s[textEndIndex+1] != '(') {
         return null
     }
-    val linkEndIndex = searchCharFrom(s, ']', textEndIndex+2)
+    val linkEndIndex = searchCharFrom(s, ')', textEndIndex+2)
     if(linkEndIndex == -1) {
         return null
     }
@@ -55,12 +57,15 @@ fun parseHyperLink(s: String, startIndex : Int) : HyperlinkObject? {
     return HyperlinkObject(text, link)
 }
 
-
+//Entrée d'un lien présent dans l'article, possède le HyperlinkObject correspondant,
+//l'index du premier charactère du lien et l'index du dernier charactère du lien.
 class HyperlinkEntry(val hyperlink : HyperlinkObject, val startPos : Int, val endPos : Int)
 
 class Article(private val title : String, private val rawContent: String) {
+    //contient la liste des liens présents dans l'article
     private val hyperlinkList = mutableListOf<HyperlinkEntry>()
 
+    //traiter le texte brut de l'article
     private val annotatedContent : AnnotatedString = buildAnnotatedString {
         //append(rawContent)
         var i = 0               //nombre de charactères de rawContent traité
@@ -68,7 +73,7 @@ class Article(private val title : String, private val rawContent: String) {
 
         while(i < rawContent.length) {
             val c = rawContent[i]       //récupérer le charactère
-            if(c == '{') {      //lien ?
+            if(c == '[') {      //lien ?
                 //traiter le lien
                 val hyperlink = parseHyperLink(rawContent, i)
 
@@ -96,7 +101,7 @@ class Article(private val title : String, private val rawContent: String) {
                     )
                     hyperlinkList.add(entry)
 
-                    i += hyperlink.calculateStringLenght()
+                    i += hyperlink.calculateRawStringLenght()
                     charCount += hyperlink.text.length
                 }
             }
@@ -108,6 +113,9 @@ class Article(private val title : String, private val rawContent: String) {
         }
     }
 
+    //créé un composable à partir de l'article.
+    //note : le composable créé en lui-même n'est pas scrollable, il faut donc que le parent
+    //       de celui-ci gère le scrolling.
     @Composable
     fun MakeComponent(navController: NavHostController) {
         println(title)
@@ -115,12 +123,12 @@ class Article(private val title : String, private val rawContent: String) {
         //Text(text = content)
         ClickableText(
             text = annotatedContent,
-            onClick = {     //"it" correspond au caractère qui a été clické
+            onClick = {     //"it" correspond à l'index du caractère qui a été clické
                 println("clicked $it")
-                for(entry in hyperlinkList) {
-                    if(entry.startPos <= it && it <= entry.endPos) {
-                        println("Clicked on link ${entry.hyperlink.link}")
-                        navController.navigate(entry.hyperlink.link)
+                for(entry in hyperlinkList) {   //regarder dans la liste des liens si un lien a été clické
+                    if(entry.startPos <= it && it <= entry.endPos) {        //si cette condition est rempli, un lien a été cliké
+                        println("Ce lien a été clické : ${entry.hyperlink.link}")
+                        navController.navigate(entry.hyperlink.link)        //naviguer vers la déstination du lien
                     }
                 }
             },

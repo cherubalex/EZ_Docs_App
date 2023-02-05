@@ -1,47 +1,52 @@
 package com.example.ez_docs_app.article
 
-class ArticleIndexEntry(val displayName : String, val internalName : String)
+import android.content.Context
+import java.io.FileNotFoundException
+import java.io.IOException
 
-val articlesIndex = listOf<ArticleIndexEntry>(
-    ArticleIndexEntry("Article test", "testarticle"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine"),
-    ArticleIndexEntry("Chocolatine", "chocolatine")
+//filename est le nom du fichier tel que son chemin est "articles/{filename}
+//Cette fonction lit la première ligne du fichier
+fun getArticleName(filename : String, context: Context) : String {
+    val inFileTitle: String?
+     context.assets.open("articles/$filename").bufferedReader().use {
+         inFileTitle = it.readLine()    //lire le titre depuis la première ligne
+    }   //.use {} ferme automatiquement le bufferedReader
 
-)
-
-fun getArticleWithName(name : String?) : Article {
-    if(name == "testarticle") {
-        return Article(
-            "Titre",
-            "Ceci est le contenu de l'article.\n" +
-                    "J'aime les pates et {chocolatine}[article/chocolatine], supérieur aux pains aux chocolats qui eux sont médiocres"
-        )
+    if(inFileTitle == null) {
+        return "null"
     }
-    else if(name == "chocolatine") {
-        return Article(
-            "Chocolatine",
-            "Ceci est un article ayant pour but de faire l'éloge des chocolatines."
-        )
+    return inFileTitle
+}
+
+//fileName est le nom du fichier tel que son chemin est "articles/{filename}
+fun getArticleWithName(fileName : String?, context: Context) : Article {
+    if(fileName == null) {
+        return Article("Article invalide", "L'article avec le nom $fileName n'existe pas :(")
     }
 
+    val titreArticle: String?
+    val contentArticle: String?
 
-    return Article("Article invalide", "L'article avec le nom $name n'existe pas :(")
+    try {
+        context.assets.open("articles/$fileName").bufferedReader().use {
+            titreArticle = it.readLine()    //lire le titre depuis la première ligne
+            contentArticle = it.readText()  //lire le contenu
+        }   //.use {} ferme automatiquement le bufferedReader
+    }
+    catch (e: FileNotFoundException) {
+        return Article("Erreur", "Le fichier articles/$fileName n'existe pas.")
+    }
+    catch (e: IOException) {
+        return Article("Erreur", "Une erreur à eu lieu lors de la lecture du fichier articles/$fileName.")
+    }
+
+    var titreFinal: String = "[Article sans titre]"     //supposer que la lecture du titre rate/soit vide
+    if(!titreArticle.isNullOrBlank()) {      //vérifier si la lecture du titre est un succès
+        titreFinal = titreArticle
+    }
+
+    if(contentArticle.isNullOrBlank()) {        //vérifier si la lecture de l'article est un succès
+        return Article(titreFinal, "La lecture de l'article a raté :(")
+    }
+    return Article(titreFinal, contentArticle)
 }
