@@ -105,67 +105,12 @@ fun HomePage(navController : NavHostController) {
     }
 }
 
-@OptIn(ExperimentalMaterialApi::class)
-@Composable
-fun CoursPage(navController : NavHostController, context: Context) {
-    //Obtenir la liste de tous les articles.
-    //todo : gèrer IOExeption ?
-    val articlesList: Array<out String>? = context.assets.list("articles")
-
-    Column {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .weight(weight = 2f, fill = false)
-                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //Pour ne pas que le bas de la page soit sous la navbar.
-        ) {
-            if (articlesList != null) {
-                //Ajouter des liens vers les articles un par un dans des ListItems.
-                for(articleFileName in articlesList) {
-                    //https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#ListItem(androidx.compose.ui.Modifier,kotlin.Function0,kotlin.Function0,kotlin.Boolean,kotlin.Function0,kotlin.Function0,kotlin.Function0)
-                    ListItem(
-                        text = { Text( getArticleName(articleFileName, context)) },
-                        modifier = Modifier.clickable {
-                            navController.navigate("articles/$articleFileName")
-                        }
-                    )
-                    Divider()       //Séparateurs entre les éléments de la liste.
-                }
-            }
-            else {
-                Text(text = "Aucun article n'a été trouvé.")
-            }
-        }
-    }
-}
-
 @Composable
 fun QuizPage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
     Text(text = "Quiz (à faire)")
 }
 
-//nomArticle correspond au nom du fichier tel que son chemin est "assets/articles/{nomArticle}
-@Composable
-fun ArticlesPage(navController : NavHostController, nomArticle : String?, context: Context) {
-    Column {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .weight(weight = 2f, fill = false)
-                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
-        ) {
-            if(nomArticle.isNullOrBlank()) {
-                getArticleWithName("null", context).MakeComponent(navController)
-            }
-            else {
-                getArticleWithName(nomArticle, context).MakeComponent(navController)
-            }
-        }
-    }
-}
 
 @Composable
 fun Greeting(name: String) {
