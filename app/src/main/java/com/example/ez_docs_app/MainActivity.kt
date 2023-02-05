@@ -110,17 +110,3 @@ fun QuizPage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
     Text(text = "Quiz (à faire)")
 }
-
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    EZ_Docs_AppTheme {
-        Greeting("Android")
-    }
-}
