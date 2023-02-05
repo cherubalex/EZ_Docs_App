@@ -67,12 +67,12 @@ class Article(private val title : String, private val rawContent: String) {
 
     //traiter le texte brut de l'article
     private val annotatedContent : AnnotatedString = buildAnnotatedString {
-        //append(rawContent)
         var i = 0               //nombre de charactères de rawContent traité
         var charCount = 0       //nombre de charactères affiché sur la page
 
         while(i < rawContent.length) {
             val c = rawContent[i]       //récupérer le charactère
+
             if(c == '[') {      //lien ?
                 //traiter le lien
                 val hyperlink = parseHyperLink(rawContent, i)
@@ -105,6 +105,30 @@ class Article(private val title : String, private val rawContent: String) {
                     charCount += hyperlink.text.length
                 }
             }
+            else if(c == '#') {      //titre
+                if(i > 0 && rawContent[i-1] == '\n') {
+                    val endLineIndex = searchCharFrom(rawContent, '\n', i)
+                    val lineLenght = endLineIndex - i       //taille de la ligne dans le rawContent
+
+                    // i+1 pour ne pas inclure le '#'
+                    //endLineIndex est exclut de l'interval, donc le '\n' n'est pas pris en compte.
+                    val lineContent = rawContent.substring(i + 1, endLineIndex)
+                    append(lineContent)
+                    addStyle(
+                        style = SpanStyle(
+                            fontSize = 20.sp
+                        ), charCount, charCount + lineLenght - 1
+                    )
+
+                    i += lineLenght
+                    charCount += lineLenght - 1    //-1 pour ne las compter le '#'
+                }
+                else {
+                    append(c)
+                    i++         //passer au charactère suivant
+                    charCount++
+                }
+            }
             else {      //charactère normal
                 append(c)
                 i++         //passer au charactère suivant
@@ -119,7 +143,7 @@ class Article(private val title : String, private val rawContent: String) {
     @Composable
     fun MakeComponent(navController: NavHostController) {
         println(title)
-        Text(text = title, fontSize = 20.sp)
+        Text(text = title, fontSize = 26.sp)
         //Text(text = content)
         ClickableText(
             text = annotatedContent,
