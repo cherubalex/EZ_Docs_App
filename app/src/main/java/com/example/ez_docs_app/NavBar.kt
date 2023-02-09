@@ -83,7 +83,7 @@ fun navBar(navController : NavHostController, content : List<NavBarElementDescri
     //Stocke le nom de la destination cliqué la plus récemment (premier élément de la liste par défaut)
     var selectedElem = rememberSaveable{ mutableStateOf(content[0].elementDest) }
 
-    navBarShape(screenWidth) {
+    navBarShape {
         for(element in content) {
             //Ajouter tous les éléments un par un
             navBarItem(
@@ -102,14 +102,14 @@ fun navBar(navController : NavHostController, content : List<NavBarElementDescri
 
 // Correspond au rectangle de la barre de navigation avec tout son contenu.
 @Composable
-fun navBarShape(screenWidth : Int, content: @Composable () -> Unit) {
+fun navBarShape(content: @Composable () -> Unit) {
 
     //L'élément "Box" correspond à la forme oval de la barre de navigation
     Box(
         modifier = Modifier
             .padding((navBarPaddingOnSides / 2).dp)
             .clip(CircleShape)
-            .width((screenWidth - navBarPaddingOnSides / 2).dp)
+            .fillMaxWidth()
             .height(navBarHeight.dp)
             .background(MaterialTheme.colors.primary)
             .clickable(enabled = false, onClick = { /* rien */ })       //faire en sorte que l'on ne puisse pas clicker sur ce qu'il y a derrière la navbar
@@ -160,10 +160,10 @@ fun navBarItemPreview() {
     )
 }
 
-@Preview
+@Preview(widthDp = 500)
 @Composable
 fun navBarPreview() {
-    navBarShape(500) {
+    navBarShape {
         navBarItemPreview()
         navBarItemPreview()
         navBarItemPreview()
