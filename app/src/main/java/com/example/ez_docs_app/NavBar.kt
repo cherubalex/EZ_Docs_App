@@ -8,7 +8,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -18,7 +17,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -54,32 +52,10 @@ fun getColorForSelection(selected : Boolean) : Color {
 ///////////////////////////
 // Composants
 
-// Correspond à la barre de navigation
-// Créé une surface avec un arrière-plan transparent
-// puis ajoute sur cette surface la barre de navigation en elle-même (NavBarContent())
-@Composable
-fun navBarSurface(navController : NavHostController, content : List<NavBarElementDescriptor>) {
-    val configuration = LocalConfiguration.current
-    //val screenWidth = configuration.screenWidthDp
-    val screenHeight = configuration.screenHeightDp
-
-    //La surface permet de superposer la navbar au-dessus de tout le reste
-    Surface (
-        modifier = Modifier
-            .offset(x = 0.dp, y = (screenHeight - navBarHeight - navBarPaddingOnSides).dp), //déplacer la surface en bass de l'écran
-        color = Color.Transparent   //La surface a un arrière-plan transparent
-    ) {
-        //Ajouter la NavBar en elle-même sur la surface
-        navBar(navController = navController, content = content)
-    }
-}
 
 //Pour être utilisé dans un Scaffold
 @Composable
 fun navBar(navController : NavHostController, content : List<NavBarElementDescriptor>) {
-    val configuration = LocalConfiguration.current
-    val screenWidth = configuration.screenWidthDp
-
     //Stocke le nom de la destination cliqué la plus récemment (premier élément de la liste par défaut)
     var selectedElem = rememberSaveable{ mutableStateOf(content[0].elementDest) }
 
