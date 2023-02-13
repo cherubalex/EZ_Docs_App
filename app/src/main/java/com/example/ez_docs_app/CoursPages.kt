@@ -65,7 +65,7 @@ fun ArticlesPage(navController : NavHostController, nomArticle : String?, contex
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState())
                 .weight(weight = 2f, fill = false)
-                .padding(bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
+                .padding(start = 10.dp, end = 10.dp, bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
         ) {
             if(nomArticle.isNullOrBlank()) {
                 getArticleWithName("null", context).MakeComponent(navController)
