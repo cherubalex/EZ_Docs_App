@@ -16,29 +16,19 @@ class Article(
     private val rawContent: String,
     private val context: Context
     ) {
-
     //créé un composable à partir de l'article.
     //note : le composable créé en lui-même n'est pas scrollable, il faut donc que le parent
     //       de celui-ci gère le scrolling.
     @Composable
     fun MakeComponent(navController: NavHostController) {
-        //println(title)
+        //Afficher le titre de l'article
         Text(text = title, fontSize = 26.sp)
 
-        var rawTextIndex = 0    //Endroit du contenu que l'on est en trein de traiter
-
+        val rawContentLines = rawContent.split("\n")
         //traiter l'article ligne par ligne
-        while(rawTextIndex < rawContent.length) {
-            //Obtenir la ligne
-            var EOLIndex = searchCharFrom(rawContent, '\n', rawTextIndex)   //index de la fin de ligne de la ligne actuel
-            if(EOLIndex == -1) EOLIndex = rawContent.length
-            val currentLine = rawContent.substring(rawTextIndex, EOLIndex)
-
+        for(currentLine in rawContentLines) {
             //Traiter la ligne et la transformer en Composable
             ProcessRawLine(currentLine, navController)
-
-            //passer à la ligne suivante (aka calculer l'index du premier charactère de la ligne suivante)
-            rawTextIndex = EOLIndex + 1  //+1 pour skip le charactère '\n'
         }
     }
 

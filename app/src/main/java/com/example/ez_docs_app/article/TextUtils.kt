@@ -17,9 +17,10 @@ fun searchCharFrom(s : String, c : Char, startIndex : Int) : Int {
     return -1
 }
 
-//La fonction prend en entrée une chaine de charactère et retourne un AnnotatedString
-//povant être utilisé dans un ClickableText.
-//note : La fonction écrit dans hyperlinkEntries,
+//La fonction prend en entrée une chaine de charactère et
+//retourne un AnnotatedString (chaine de caractère contenant des informations sur le style).
+//L'AnnotatedString peut être utilisé dans un ClickableText.
+//note : La fonction écrit dans hyperlinkEntries afin d'y mettre les liens "[]()",
 //cette liste doit être initialisé (et vide) avant l'appelle de la fonction.
 fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<HyperlinkEntry>) : AnnotatedString {
     return buildAnnotatedString {
