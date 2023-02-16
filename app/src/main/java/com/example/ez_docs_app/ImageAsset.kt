@@ -3,10 +3,14 @@ package com.example.ez_docs_app
 import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalContext
 import androidx.core.graphics.drawable.toBitmap
 import java.io.FileNotFoundException
 
@@ -34,7 +38,9 @@ fun LoadDrawableFromAsset(fileName: String, context: Context) : Drawable? {
 //Affiche l'image avec une taille choisi "par défaut" par l'appelle de drawableFromFile.toBitmap()
 //Cette taille par défaut correspond à la taille "intrinsèque" (aucune idée de ce que ça veut dire).
 @Composable
-fun ImageAsset(fileName : String, context : Context) {
+fun ImageAsset(fileName : String, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
+
     //Charger l'image depuis le fichier
     val drawableFromFile = LoadDrawableFromAsset(fileName, context)
 
@@ -52,9 +58,16 @@ fun ImageAsset(fileName : String, context : Context) {
     }
 }
 
-//Affiche l'image avec une taille choisi avec les paramètres width et height.
+//Change la résolution de l'image à la taille width*height puis affiche l'image.
 @Composable
-fun ImageAsset(fileName : String, width : Int, height : Int, context : Context) {
+fun ImageAsset(
+    fileName : String,
+    width : Int,
+    height : Int,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+
     //Charger l'image depuis le fichier
     val drawableFromFile = LoadDrawableFromAsset(fileName, context)
 
@@ -64,10 +77,10 @@ fun ImageAsset(fileName : String, width : Int, height : Int, context : Context) 
         val bitmapImage = drawableFromFile.toBitmap(width, height).asImageBitmap()
 
         //afficher l'image
-        Image(bitmapImage, "description")   //affiche l'image avec une taille par "défaut".
+        Image(bitmapImage, "description", modifier = modifier)   //affiche l'image avec une taille par "défaut".
         //Image(bitmap = (drawableFromFile as BitmapDrawable).bitmap.asImageBitmap(), "fd")     //affiche l'image dans sa vrai taille.
     }
     else {
-        Text(text = "[Image $fileName n'a pas pu etre chargé]", color = Color.Red)
+        Box(modifier = modifier.background(Color.Red))
     }
 }

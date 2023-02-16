@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
                         NavHost(navController, startDestination = "home") { //Permet de "choisir"/"délimiter" les pages de l'application
                             composable("home") { HomePage(navController) }
-                            composable("cours") { CoursPage(navController, applicationContext) }
+                            composable("cours") { CoursPage(navController) }
                             composable("quiz") { QuizPage(navController) }
 
                             composable("articles/{nomArticle}",

@@ -98,14 +98,14 @@ class Article(
             val height = splittedLine[3].toIntOrNull()
 
             if(width == null || height == null) {
-                ImageAsset(fileName = filePath, context)
+                ImageAsset(fileName = filePath)
             }
             else {
-                ImageAsset(fileName = filePath, width, height, context)
+                ImageAsset(fileName = filePath, width, height)
             }
             return
         }
 
-        ImageAsset(fileName = filePath, context)
+        ImageAsset(fileName = filePath)
     }
 }
