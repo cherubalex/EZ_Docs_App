@@ -32,8 +32,6 @@ fun CoursPage(navController : NavHostController) {
                 .verticalScroll(rememberScrollState())
                 .weight(weight = 2f, fill = false)
                 .padding(
-                    start = 10.dp,
-                    end = 10.dp,
                     bottom = (navBarHeight + navBarPaddingOnSides).dp
                 ) //pour ne pas que le bas de la page soit sous la navbar
         ) {
