@@ -70,7 +70,7 @@ fun getArticleIcone(filename : String, context: Context) {
 //fileName est le nom du fichier tel que son chemin est "articles/{filename}
 fun getArticleWithName(fileName : String?, context: Context) : Article {
     if(fileName == null) {
-        return Article("Article invalide", "L'article avec le nom $fileName n'existe pas :(", context)
+        return Article("Article invalide", "L'article avec le nom $fileName n'existe pas :(")
     }
 
     val titreArticle: String?
@@ -83,10 +83,10 @@ fun getArticleWithName(fileName : String?, context: Context) : Article {
         }   //.use {} ferme automatiquement le bufferedReader
     }
     catch (e: FileNotFoundException) {
-        return Article("Erreur", "Le fichier articles/$fileName n'existe pas.", context)
+        return Article("Erreur", "Le fichier articles/$fileName n'existe pas.")
     }
     catch (e: IOException) {
-        return Article("Erreur", "Une erreur à eu lieu lors de la lecture du fichier articles/$fileName.", context)
+        return Article("Erreur", "Une erreur à eu lieu lors de la lecture du fichier articles/$fileName.")
     }
 
     var titreFinal: String = "[Article sans titre]"     //supposer que la lecture du titre rate/soit vide
@@ -95,9 +95,9 @@ fun getArticleWithName(fileName : String?, context: Context) : Article {
     }
 
     if(contentArticle.isNullOrBlank()) {        //vérifier si la lecture de l'article est un succès
-        return Article(titreFinal, "La lecture de l'article a raté :(", context)
+        return Article(titreFinal, "La lecture de l'article a raté :(")
     }
-    return Article(titreFinal, contentArticle, context)
+    return Article(titreFinal, contentArticle)
 }
 
 

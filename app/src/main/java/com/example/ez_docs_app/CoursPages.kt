@@ -3,8 +3,7 @@ package com.example.ez_docs_app
 import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
@@ -22,16 +21,16 @@ import com.example.ez_docs_app.article.getArticleWithName
 fun CoursPage(navController : NavHostController) {
     val context = LocalContext.current
 
-    //Obtenir la liste de tous les articles.
+    //Obtenir la liste de tous les noms de fichier des articles.
     //todo : gèrer IOExeption ?
-    val articlesList: Array<out String>? = context.assets.list("articles")
+    val articlesList: Array<String>? = context.assets.list("articles")
 
     LazyColumn(modifier = Modifier.fillMaxSize()) {
         //Vérifier s'il y a des articles dans le dossier
         if (articlesList != null) {
             //Ajouter des liens vers les articles un par un dans des ListItems.
-            items(articlesList.size) {
-                ArticleListItem(articlesList[it], navController)
+            items(articlesList) { articleFileName ->
+                ArticleListItem(articleFileName, navController)
                 Divider()           //Séparateurs entre les éléments de la liste.
             }
         } else {
@@ -52,27 +51,10 @@ fun CoursPage(navController : NavHostController) {
 //nomArticle correspond au nom du fichier tel que son chemin est "assets/articles/{nomArticle}"
 @Composable
 fun ArticlesPage(navController : NavHostController, nomArticle : String?, context: Context) {
-    //fixme : Utiliser une LazyColumn pour les artcile,
-    //        cela signifier que Article.MakeComponent() retournera probablement
-    //        toute la page dans une LazyColumn.
-    Column {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .weight(weight = 2f, fill = false)
-                .padding(
-                    start = 10.dp,
-                    end = 10.dp,
-                    bottom = (navBarHeight + navBarPaddingOnSides).dp   //pour ne pas que le bas de la page soit sous la navbar
-                )
-        ) {
-            if(nomArticle.isNullOrBlank()) {
-                getArticleWithName("null", context).MakeComponent(navController)
-            }
-            else {
-                getArticleWithName(nomArticle, context).MakeComponent(navController)
-            }
-        }
+    if(nomArticle.isNullOrBlank()) {
+        getArticleWithName("null", context).MakeComponent(navController)
+    }
+    else {
+        getArticleWithName(nomArticle, context).MakeComponent(navController)
     }
 }

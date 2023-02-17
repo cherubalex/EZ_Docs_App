@@ -1,34 +1,54 @@
 package com.example.ez_docs_app.article
 
-import android.content.Context
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.ez_docs_app.ImageAsset
+import com.example.ez_docs_app.navBarHeight
+import com.example.ez_docs_app.navBarPaddingOnSides
 
 
 class Article(
     private val title : String,
-    private val rawContent: String,
-    private val context: Context
+    private val rawContent: String
     ) {
     //créé un composable à partir de l'article.
     //note : le composable créé en lui-même n'est pas scrollable, il faut donc que le parent
     //       de celui-ci gère le scrolling.
     @Composable
     fun MakeComponent(navController: NavHostController) {
-        //Afficher le titre de l'article
-        Text(text = title, fontSize = 26.sp)
-
+        //"Découper" l'article ligne par ligne.
         val rawContentLines = rawContent.split("\n")
-        //traiter l'article ligne par ligne
-        for(currentLine in rawContentLines) {
-            //Traiter la ligne et la transformer en Composable
-            ProcessRawLine(currentLine, navController)
+
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(start = 10.dp, end = 10.dp)
+        ) {
+            //Afficher le titre de l'article
+            item { Text(text = title, fontSize = 26.sp) }
+
+            //traiter l'article ligne par ligne
+            items(rawContentLines) { currentLine ->
+                ProcessRawLine(currentLine, navController)
+            }
+
+            item {
+                //faire en sorte de pouvoir scroller plus pour que le contenu ne soit pas sous la navbar
+                Spacer(modifier = Modifier.height((navBarHeight + navBarPaddingOnSides).dp))
+            }
         }
     }
 
