@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
@@ -27,6 +25,7 @@ import com.example.ez_docs_app.ui.theme.EZ_Docs_AppTheme
 import com.example.ez_docs_app.ui.theme.Purple500
 import java.util.*
 import android.os.Bundle
+import androidx.compose.foundation.lazy.LazyColumn
 
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -85,17 +84,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomePage(navController : NavHostController) {
     //todo : ajouter le vrai contenu
-    Column {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .weight(weight = 2f, fill = false)
-                .padding(start = 10.dp, end = 10.dp, bottom = (navBarHeight + navBarPaddingOnSides).dp) //pour ne pas que le bas de la page soit sous la navbar
-        ) {
-            for (i in 0..42) {
-                Text(text = "Accueil $i")
-            }
+    LazyColumn(modifier = Modifier.fillMaxSize()){
+        items(42) {
+            Text(text = "Accueil ${it+1}")
+        }
+
+        item {
+            //faire en sorte de pouvoir scroller plus pour que le contenu ne soit pas sous la navbar
+            Spacer(modifier = Modifier.height((navBarHeight + navBarPaddingOnSides).dp))
         }
     }
 }
