@@ -38,7 +38,7 @@ fun getArticleName(filename : String, context: Context) : String {
 //filename est le nom du fichier tel que son chemin est "articles/{filename}"
 //Cette fonction lit la première ligne du fichier, la partie après le #.
 @Composable
-fun getArticleIcone(filename : String, context: Context) {
+fun ArticleIcone(filename : String, context: Context) {
     val inFileTitle: String?
     context.assets.open("articles/$filename").bufferedReader().use {
         inFileTitle = it.readLine()    //lire le titre depuis la première ligne
@@ -89,7 +89,7 @@ fun getArticleWithName(fileName : String?, context: Context) : Article {
         return Article("Erreur", "Une erreur à eu lieu lors de la lecture du fichier articles/$fileName.")
     }
 
-    var titreFinal: String = "[Article sans titre]"     //supposer que la lecture du titre rate/soit vide
+    var titreFinal = "[Article sans titre]"     //supposer que la lecture du titre rate/soit vide
     if(!titreArticle.isNullOrBlank()) {      //vérifier si la lecture du titre est un succès
         titreFinal = titreArticle.split("#")[0]
     }
@@ -111,7 +111,7 @@ fun ArticleListItem(articleFileName : String, navController: NavController) {
 
     //infos sur ListItem : https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#ListItem(androidx.compose.ui.Modifier,kotlin.Function0,kotlin.Function0,kotlin.Boolean,kotlin.Function0,kotlin.Function0,kotlin.Function0)
     ListItem(
-        icon = { getArticleIcone(articleFileName, context)},
+        icon = { ArticleIcone(articleFileName, context)},
         text = { Text( getArticleName(articleFileName, context)) },
         modifier = Modifier
             .clickable {
