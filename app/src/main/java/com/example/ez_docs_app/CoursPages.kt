@@ -1,6 +1,5 @@
 package com.example.ez_docs_app
 
-import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -50,7 +49,8 @@ fun CoursPage(navController : NavHostController) {
 //Affiche le contenu d'un article.
 //nomArticle correspond au nom du fichier tel que son chemin est "assets/articles/{nomArticle}"
 @Composable
-fun ArticlesPage(navController : NavHostController, nomArticle : String?, context: Context) {
+fun ArticlesPage(navController : NavHostController, nomArticle : String?) {
+    val context = LocalContext.current
     if(nomArticle.isNullOrBlank()) {
         getArticleWithName("null", context).MakeComponent(navController)
     }
