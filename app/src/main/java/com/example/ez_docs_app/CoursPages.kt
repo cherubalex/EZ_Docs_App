@@ -17,7 +17,7 @@ import com.example.ez_docs_app.article.getArticleWithName
 //Affiche la liste de tous les articles disponibles dans assets/articles.
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun CoursPage(navController : NavHostController) {
+fun ArticleListPage(navController : NavHostController) {
     val context = LocalContext.current
 
     //Obtenir la liste de tous les noms de fichier des articles.

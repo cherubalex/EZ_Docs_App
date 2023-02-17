@@ -44,7 +44,7 @@ fun MainApp() {
     //"Descriptions" de tous les éléments de la navbar + destinations
     val pagesDescriptors = listOf(
         NavBarElementDescriptor("Home", "home", Icons.Default.Home),
-        NavBarElementDescriptor("Cours", "cours", Icons.Default.Info),
+        NavBarElementDescriptor("Cours", "articlelist", Icons.Default.Info),
         NavBarElementDescriptor("Quiz", "quizlist", Icons.Default.Send)
     )
 
@@ -52,7 +52,7 @@ fun MainApp() {
     val navController = rememberNavController()
 
     //Permet de changer le titre
-    val topTitle = remember { mutableStateOf("Accueil") }
+    val topTitle = remember { mutableStateOf("EZ-Docs") }
 
     //Pour plus d'info : https://developer.android.com/jetpack/compose/layouts/material?hl=fr#scaffold
     Scaffold(
@@ -61,7 +61,7 @@ fun MainApp() {
                 elevation = 4.dp,
                 backgroundColor = Purple500
             ) {
-                Text(text = "EZ-Docs", fontSize = 24.sp)
+                Text(text = topTitle.value, fontSize = 24.sp)
             }
         },
         bottomBar = {
@@ -75,14 +75,15 @@ fun MainApp() {
         ) {
             NavHost(navController, startDestination = "home") { //Permet de "choisir"/"délimiter" les pages de l'application
                 composable("home") { HomePage(navController) }
-                composable("cours") { CoursPage(navController) }
-                composable("quizlist") { QuizListPage(navController) }
 
+                composable("articlelist") { ArticleListPage(navController) }
                 composable("articles/{nomArticle}",
                     arguments = listOf(navArgument("nomArticle") { type = NavType.StringType })
                 ) {
                     ArticlesPage(navController = navController, nomArticle = it.arguments?.getString("nomArticle"))
                 }
+
+                composable("quizlist") { QuizListPage(navController) }
             }   //Navhost
         }   //Surface
     }   //Scaffold
