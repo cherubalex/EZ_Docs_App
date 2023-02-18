@@ -1,6 +1,5 @@
 package com.example.ez_docs_app
 
-import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -18,7 +17,7 @@ import com.example.ez_docs_app.article.getArticleWithName
 //Affiche la liste de tous les articles disponibles dans assets/articles.
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun CoursPage(navController : NavHostController) {
+fun ArticleListPage(navController : NavHostController) {
     val context = LocalContext.current
 
     //Obtenir la liste de tous les noms de fichier des articles.
@@ -50,7 +49,8 @@ fun CoursPage(navController : NavHostController) {
 //Affiche le contenu d'un article.
 //nomArticle correspond au nom du fichier tel que son chemin est "assets/articles/{nomArticle}"
 @Composable
-fun ArticlesPage(navController : NavHostController, nomArticle : String?, context: Context) {
+fun ArticlesPage(navController : NavHostController, nomArticle : String?) {
+    val context = LocalContext.current
     if(nomArticle.isNullOrBlank()) {
         getArticleWithName("null", context).MakeComponent(navController)
     }

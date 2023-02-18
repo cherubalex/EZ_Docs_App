@@ -1,0 +1,12 @@
+Quel est la nationalité de Salazar ?
+    Espagnol
+    Italien
+    Congolais
+    #Portugais
+
+Qui est le successeur de Salazar ?
+    #Marcelo C.
+    Bill Gates
+    Marcel
+    Oui-oui
+    Jeff Bezos
