@@ -52,7 +52,7 @@ fun ImageAsset(fileName : String, modifier: Modifier = Modifier) {
         val bitmapImage = drawableFromFile.toBitmap().asImageBitmap()
 
         //afficher l'image
-        Image(bitmapImage, "description")   //affiche l'image avec une taille par "défaut".
+        Image(bitmapImage, "description", modifier = modifier)   //affiche l'image avec une taille par "défaut".
         //Image(bitmap = (drawableFromFile as BitmapDrawable).bitmap.asImageBitmap(), "fd")     //affiche l'image dans sa vrai taille.
     }
     else {

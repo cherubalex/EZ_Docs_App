@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -15,7 +14,6 @@ import com.example.ez_docs_app.article.ArticleListItem
 import com.example.ez_docs_app.article.getArticleWithName
 
 //Affiche la liste de tous les articles disponibles dans assets/articles.
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun ArticleListPage(navController : NavHostController) {
     val context = LocalContext.current

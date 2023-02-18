@@ -90,7 +90,7 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                         haveConfirmedOnce.value = true
                     }   //onClick = {}
                 ) {
-                    Text(text = "Confirmer")
+                    Text(text = "Confirmer", color = MaterialTheme.colors.onPrimary)
                 }   //Button
             }
 
@@ -116,7 +116,7 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                     },
                     colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.secondary)
                 ) {
-                    Text(text = "Suivant")
+                    Text(text = "Suivant", color = MaterialTheme.colors.onSecondary)
                 }   //Button
             }
         }   //Row

@@ -1,9 +1,6 @@
 package com.example.ez_docs_app.article
 
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.ClickableText
@@ -121,7 +118,13 @@ class Article(
                 ImageAsset(fileName = filePath)
             }
             else {
-                ImageAsset(fileName = filePath, width, height)
+                //ImageAsset(fileName = filePath, width, height)
+                ImageAsset(
+                    fileName = filePath,
+                    width, height,
+                    modifier = Modifier
+                        .width(width.dp).height(height.dp)
+                )
             }
             return
         }
