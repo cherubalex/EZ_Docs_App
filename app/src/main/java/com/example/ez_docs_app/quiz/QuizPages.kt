@@ -77,13 +77,17 @@ fun QuizPage(quizName: String?, navController: NavHostController) {
             Text("Vous avez terminé le quiz avec un score de ${score.value}/${questions.size}.")
 
             Row(
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                horizontalArrangement = Arrangement.Center,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Button(
                     onClick = {
                         //Retourner là où était l'utilisateur précédemment
-                        navController.navigate(navController.previousBackStackEntry!!.destination.route as String)
+                        //La condition permet de vérifier si l'utilisateur était sur une page avant.
+                        //Plus de détails : https://stackoverflow.com/a/75269457
+                        if(navController.backQueue.size > 2) {
+                            navController.popBackStack()
+                        }
                     }
                 ) {
                     Text(text = "Quitter le quiz")

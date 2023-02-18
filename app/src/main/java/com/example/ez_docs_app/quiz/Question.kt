@@ -1,5 +1,6 @@
 package com.example.ez_docs_app.quiz
 
+import androidx.compose.animation.*
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -55,11 +56,14 @@ class Question(val strQuestion: String, val reponses: List<String>) {
         }
 
         Row(
-            horizontalArrangement = Arrangement.SpaceEvenly,
+            horizontalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxWidth()
         ) {
-            //Afficher le bouton confirmer si l'utilisateur n'a pas encore confirmer
-            if(!haveConfirmedOnce.value) {
+            //Afficher le bouton "confirmer" ...
+            AnimatedVisibility(
+                visible = !haveConfirmedOnce.value,     //... uniquement quand l'utilisateur n'a pas encore confirmé
+                enter = expandHorizontally(), exit = shrinkHorizontally()
+            ) {
                 Button(
                     onClick = {
                         var correct = true  //supposer que l'utilisateur a bon
@@ -73,7 +77,7 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                                     colorStates[i].value = 2    //la mettre en rouge si elle est pas coché
                                     correct = false
                                 }
-                            } else {  //Pas de # en premier charactère (pas la bonne réponse)
+                            } else {  //Pas de # en premier charactère (pas une bonne réponse)
                                 if (checkboxesStates[i].value) {
                                     colorStates[i].value = 2    //la mettre en rouge si elle est coché
                                     correct = false
@@ -82,15 +86,19 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                                 }
                             }
                         }
-                        if(correct) score.value += 1
+                        if (correct) score.value += 1
                         haveConfirmedOnce.value = true
                     }   //onClick = {}
                 ) {
                     Text(text = "Confirmer")
                 }   //Button
             }
-            //Afficher le bouton suivant si l'utilisateur a confirmé au moins une fois sa réponse
-            else {
+
+            //Afficher le bouton "Suivant" ...
+            AnimatedVisibility(
+                visible = haveConfirmedOnce.value,      //... uniquement quand l'utilisateur a confirmé
+                enter = expandHorizontally(), exit = shrinkHorizontally()
+            ) {
                 Button(
                     onClick = {
                         println(checkboxesStates.size)
@@ -110,7 +118,7 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                 ) {
                     Text(text = "Suivant")
                 }   //Button
-            }   //else
+            }
         }   //Row
     }   //MakeComponant()
 
