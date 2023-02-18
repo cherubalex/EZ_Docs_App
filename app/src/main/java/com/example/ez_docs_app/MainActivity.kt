@@ -84,6 +84,11 @@ fun MainApp() {
                 }
 
                 composable("quizlist") { QuizListPage(navController) }
+                composable("quiz/{nomQuiz}",
+                    arguments = listOf(navArgument("nomQuiz") { type = NavType.StringType })
+                ) {
+                    QuizPage(it.arguments?.getString("nomQuiz"), navController)
+                }
             }   //Navhost
         }   //Surface
     }   //Scaffold
