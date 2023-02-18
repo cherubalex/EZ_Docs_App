@@ -16,11 +16,13 @@ import java.io.FileNotFoundException
 
 
 fun LoadDrawableFromAsset(fileName: String, context: Context) : Drawable? {
+    val fileNameTrim = fileName.trim()
+
     val drawableFromFile : Drawable?
 
     try {
         //Charger le fichier stockant l'image.
-        val imgFile = context.assets.open(fileName)
+        val imgFile = context.assets.open(fileNameTrim)
 
         //Lire l'image depuis le fichier.
         drawableFromFile = Drawable.createFromStream(imgFile, null)
