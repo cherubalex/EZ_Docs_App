@@ -65,6 +65,10 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                 enter = expandHorizontally(), exit = shrinkHorizontally()
             ) {
                 Button(
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = MaterialTheme.colors.primary,
+                        contentColor = MaterialTheme.colors.onPrimary
+                    ),
                     onClick = {
                         var correct = true  //supposer que l'utilisateur a bon
 
@@ -90,7 +94,7 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                         haveConfirmedOnce.value = true
                     }   //onClick = {}
                 ) {
-                    Text(text = "Confirmer", color = MaterialTheme.colors.onPrimary)
+                    Text(text = "Confirmer")
                 }   //Button
             }
 
@@ -100,6 +104,10 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                 enter = expandHorizontally(), exit = shrinkHorizontally()
             ) {
                 Button(
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = MaterialTheme.colors.secondary,
+                        contentColor = MaterialTheme.colors.onSecondary
+                    ),
                     onClick = {
                         println(checkboxesStates.size)
                         //"oublier" les trucs remember
@@ -113,10 +121,9 @@ class Question(val strQuestion: String, val reponses: List<String>) {
 
                         //passer à la question suivante
                         currentQuestion.value++
-                    },
-                    colors = ButtonDefaults.buttonColors(backgroundColor = MaterialTheme.colors.secondary)
+                    }
                 ) {
-                    Text(text = "Suivant", color = MaterialTheme.colors.onSecondary)
+                    Text(text = "Suivant")
                 }   //Button
             }
         }   //Row
