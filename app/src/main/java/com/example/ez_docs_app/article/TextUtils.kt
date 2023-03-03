@@ -3,6 +3,7 @@ package com.example.ez_docs_app.article
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.sp
 
@@ -27,6 +28,9 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
         var i = 0                       //index du charactère que l'on est en train de traiter dans la ligne
         var charCount = 0               //nombre de charactères de la ligne affiché sur la page
         var postApplySubTitle = false   //true si la ligne est un sous titre
+
+        var boldBegin = -1              //si un premier '*' est rencontré, l'index du charactère est affecté à cet variable.
+        var doBold = false              //true si un premier '*' est rencontré. Repassé sur false quand un deuxième est rencontré.
 
         while(i < line.length) {
             val c = line[i]
@@ -64,6 +68,23 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
             }
             else if(c == '#' && i == 0) {   //sous titre
                 postApplySubTitle = true
+                i++
+            }
+            else if(c == '*') {             //gras
+                if(doBold == false) {       //premier '*' rencontré
+                    boldBegin = charCount   //enregistrer la position dans le texte
+                    doBold = true
+                }
+                else {                      //deuxième '*' rencontré
+                    addStyle(
+                        style = SpanStyle(
+                            fontWeight = FontWeight.ExtraBold
+                        ),
+                        boldBegin,
+                        charCount
+                    )
+                    doBold = false
+                }
                 i++
             }
             else {      //charactère normal
