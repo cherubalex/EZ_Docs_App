@@ -1,9 +1,9 @@
 Antonio de Spínola # imgs/Spinola128x128.png
 &IMG imgs/Spinola783x658.png 300 250
 
-Nommé vice-chef de l'État-Major des forces armées à la suggestion de [ Francisco da Costa Gomes](TODO) le *17 janvier 1974*. Il sera limogé en mars de la m^me année.
+Nommé vice-chef de l'État-Major des forces armées à la suggestion de [Francisco da Costa Gomes](articles/costa_gomes.md) le *17 janvier 1974*. Il sera limogé en mars de la même année.
 
-En tant que représentant du *[Mouvement des Forces Armées](TODO)* (MFA), il reçoit du président du conseil des ministres, [Marcelo Caetano](articles/Marcelo_Caetano.md) la capitulation du gouvernement.
+En tant que représentant du *[Mouvement des Forces Armées](articles/mfa.md)* (MFA), il reçoit du président du conseil des ministres, [Marcelo Caetano](articles/Marcelo_Caetano.md) la capitulation du gouvernement.
 
 # Contexte de son arrivée au pouvoir
 
@@ -11,4 +11,6 @@ Après l'instauration de la *Junta de Salvação Nacional*, un groupe d'officier
 
 # Démission
 
-Le *30 septembre 1974*, le général Spinola démissionne du poste de président, dû à son mécontentement de la direction prise par la révolution des Œillets qui favorise la gauche. *Francisco da Costa Gomes* devient le nouveau président.
+Spínola est obligé d’accepter la constitution d’un nouveau gouvernement dont le premier ministre est [Vasco Gonçalves](articles/vasco.md) le *15 juillet 1974*.
+
+Le *30 septembre 1974*, le général Spinola démissionne du poste de président, dû à son mécontentement de la direction prise par la [Révolution des Œillets](articles/Revo_Oeillet.md) qui favorise la gauche. *Francisco da Costa Gomes* devient le nouveau président.
