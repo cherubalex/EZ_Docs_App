@@ -1,5 +1,6 @@
 package com.example.ez_docs_app.article
 
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -54,6 +55,17 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
                         charCount + hyperlink.text.length   //index du charactère de fin dans le texte
                     )
 
+                    //Si le lien n'a pas encore été fait
+                    if(hyperlink.link == "TODO") {
+                        addStyle(
+                            style = SpanStyle(
+                                color = Color.Yellow
+                            ),
+                            charCount,                              //index du charactère de début dans le texte
+                            charCount + hyperlink.text.length
+                        )
+                    }
+
                     //entrée qui va être ajouté dans la liste de tous les liens clickables de l'article
                     val entry = HyperlinkEntry(
                         hyperlink,
@@ -86,6 +98,11 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
                     doBold = false
                 }
                 i++
+            }
+            else if(c == '\\') {        //charactère '\' : ignorer et afficher les charactères spéciaux
+                append(line[i+1])
+                charCount++
+                i+=2
             }
             else {      //charactère normal
                 append(c)
