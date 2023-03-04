@@ -1,4 +1,4 @@
-Gouvernement Provisoir
+Gouvernement Provisoire
 
 Un gouvernement provisoir est instauré au Portugal le *[25 avril 1974](articles/Revo_Oeillet.md)* jusqu'au *25 avril 1976* (date à laquelle [la nouvelle Constitution](TODO) est adopté).
 Celui-ci est instauré par le [MFA](articles/MFA.md) et a pour but de gèrer le pays en attendant l'adoption d'une constitution démocratique.
