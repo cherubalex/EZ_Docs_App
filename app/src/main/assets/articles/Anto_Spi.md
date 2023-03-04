@@ -7,7 +7,7 @@ Le [25 avril 1974](articles/Revo_Oeillet.md), en tant que représentant du *[Mou
 
 # Contexte de son arrivée au pouvoir
 
-Après l'instauration de la *Junta de Salvação Nacional* par le MFA, un groupe d'officiers chargé de maintenir le gouvernement au Portugal à partir de 1974, le général Spínola est désigné comme président de la République. il acceptera ce poste et prendra cette fonction le *25 avril 1974*.
+Après l'instauration de la *Junta de Salvação Nacional* par le MFA, le général Spínola est désigné par celui-ci comme président de la République. il acceptera ce poste et prendra cette fonction le *25 avril 1974*.
 
 # Démission
 
