@@ -11,6 +11,6 @@ Après l'instauration de la *Junta de Salvação Nacional* par le MFA, le géné
 
 # Démission
 
-Spínola est obligé d’accepter la constitution d’un nouveau gouvernement dont le premier ministre est [Vasco Gonçalves](articles/vasco.md) le *15 juillet 1974*.
+Spínola est obligé d’accepter la constitution d’un nouveau gouvernement dont le premier ministre est [Vasco Gonçalves](articles/vasco_goncalves.md) le *15 juillet 1974*.
 
 Le *30 septembre 1974*, le général Spinola démissionne du poste de président, dû à son mécontentement de la direction prise par la [Révolution des Œillets](articles/Revo_Oeillet.md) qui favorise la gauche. *[Francisco da Costa Gomes](articles/costa_gomes.md)* devient le nouveau président.
