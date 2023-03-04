@@ -1,6 +1,6 @@
 Nouvelle Constitution
 
-La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/Gouvernement_Prov.md) et annoncé le *2 avril 1976*.
+La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/Gouvernement_Prov.md) et annoncée le *2 avril 1976*.
 Elle entre en vigueur le *25 avril 1976*, le même jours que les premières élections legislatives.
 Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/antonio_eanes.md) devient le premier président de la IIIème République portugaise. [Mario Soares](articles/mario_soares.md) est choisi comme Premier ministre.
 
