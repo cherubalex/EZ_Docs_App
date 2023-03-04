@@ -6,6 +6,6 @@ Suite à l'instauration d'un *régime totalitaire* au Portugal, les ennemis poli
 
 Après la chute du régime de Sazazar, Mário Soares revient de son exile de France le *1 mai 1974*.
 
-*Le 25 avril 1976*, Mário Soares *remporte les élections législatives* avec le Parti Socialiste. Cette date marque également l’entrée en vigueur de la *nouvelle Constitution*.
+*Le 25 avril 1976*, Mário Soares *remporte les élections législatives* avec le Parti Socialiste. Cette date marque également l’entrée en vigueur de la *[nouvelle Constitution](TODO)*.
 
 Le *14 juillet 1976*, le candidat de la coalition, le général [Antonio Ramalho Eanes](TODO) devient le premier président de la *IIIème République portugaise*, il a été élu démocratiquement le 27 juin de la même année. Nommée *Premier ministre*, le socialiste Mario Soares gouverne avec plusieurs difficultés. Le Portugal entre cependant dans une nouvelle ère marquée par des changements sociaux profond et par d’importantes évolutions économiques.
