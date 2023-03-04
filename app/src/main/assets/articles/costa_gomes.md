@@ -13,4 +13,4 @@ Le *26 juillet 1975*, le président Costa Gomes, le Premier ministre [Vasco Gon�
 # Fin de carrière
 
 À la suite de la mise en place de la [nouvelle Constitution](TODO), des *élections* sont organisées pour élire un nouveau président de la république.
-Ainsi, le *14 juillet 1976*, le général *Antonio Ramalho Eanes* devient le premier président de la IIIème République portugaise, il a été élu démocratiquement le *27 juin*.
+Ainsi, le *14 juillet 1976*, le général *[Antonio Ramalho Eanes](articles/eanes.md)* devient le premier président de la IIIème République portugaise, il a été élu démocratiquement le *27 juin*.
