@@ -12,7 +12,7 @@ L'Estado Novo ("État Nouveau" en Français) est le régime Portugais du 19 mars
 -Le *Président du Conseil* qui est le chef du gouvernement. Il est nommé par le président de la République. Il dirige l'action du gouvernement et l'assemblée ne peut pas le renverser. Ainsi, il prend toutes les décisions importantes.
 
 -Le régime possède une police politique qui devient la "PIDE" (Police internationale de défense de l’Etat) en 1945. Ce changement de nom marque également un renforcement de ses pouvoirs. Les communistes et autres ennemies politiques sont ciblés par celle-ci.
-Exemple de cibles : Bento Gonçalves, secrétaire du parti communiste, et [Mario Soares](articles/soares.md) (en raison de ses multiples oppositions au régime de Salazar)
+Exemple de cibles : Bento Gonçalves, secrétaire du parti communiste, et [Mario Soares](articles/mario_soares.md) (en raison de ses multiples oppositions au régime de Salazar)
 
 # Un régime antidémocratique
 Durant la grande majorité de l'existance de l'État Nouveau, c'est [Salazar](articles/Salazar.md) qui occupe le rôle du Président du Conseil (de 1932 à 1968).
