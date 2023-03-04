@@ -2,7 +2,7 @@ Mário Soares # imgs/Soares128x128.png
 
 &IMG imgs/Soares800x598.png 300 230
 
-Suite à l'instauration d'un *régime totalitaire* au Portugal, les ennemis politiques sont ciblés par le régime de [Salazar](articles/Salazar.md). Ainsi, Mário Soares est contraint de s'exiler. Il va choisir d'aller en France pour être en sécurité.
+Suite à l'instauration d'un *régime totalitaire* au Portugal, les ennemis politiques sont ciblés par le régime de [Salazar](articles/Salazar.md). Ainsi, Mário Soares, qui c'est ouvertement opposé à [l'État Nouveau](articles/Gouvernement_Sal.md) à plusieurs reprises, est contraint de s'exiler. Il va choisir d'aller en France pour être en sécurité.
 
 Après la chute du régime de Sazazar, Mário Soares revient de son exile de France le *1 mai 1974*.
 
