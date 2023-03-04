@@ -1,4 +1,4 @@
-Vasco dos Santos Gonçalves
+Vasco dos Santos Gonçalves # imgs/vasco128x128.jpg
 
 Vasco dos Santos Gonçalves est un général devenu premier ministre lors du [gouvernement provisoir](TODO). Il occupe cette fonction du 15 juillet 1974 au 19 septembre 1975.
 
