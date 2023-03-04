@@ -1,4 +1,4 @@
-La Révolution des Œillets
+La Révolution des Œillets # imgs/RevoOeillet128x128.jpg
 
 Le *25 avril 1974*, un coup militaire d'état militaire éclate au Portugal quelques années après la mort du [prédécesseur](articles/Salazar.md) de [Marcelo Caetano](articles/Marcelo_Caetano.md). Les révolutionnaires s'opposent à la poursuite de la guerre des colonies. En effet, en 1961, de nombreux conflits éclatent en Angola (colonie du Portugal) qui vont se poursuivre jusqu’à la révolution des Œillets, en 1974. Durant le conflit, l’armée portugaise doit mobiliser de plus en plus d’hommes, ce qui force le gouvernement à imposer le service militaire afin de réduire le manque d’effectif. Les membres de l’armée coloniale sont les principaux acteurs de la révolution des Œillets. Ensuite, cette révolution se veut surtout *pacifique* et a pour objectif d’apporter la démocratie au Portugal. C’est le général *[Antonio de Spínola](articles/Anto_Spi.md)* qui prend la tête du mouvement révolutionnaire. 
 
