@@ -8,6 +8,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -80,7 +81,7 @@ class Article(
         val hyperlinkList = mutableListOf<HyperlinkEntry>()
 
         //Composer le AnnotatedString pour le ClickableText
-        val annotatedLine = lineToAnnotatedString(lineString, hyperlinkList)
+        val annotatedLine = lineToAnnotatedString(lineString, hyperlinkList, LocalContext.current)
 
         //Afficher le texte.
         ClickableText(

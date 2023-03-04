@@ -1,12 +1,15 @@
 package com.example.ez_docs_app.article
 
+import android.content.Context
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.sp
+import java.io.FileNotFoundException
 
 // Retourne l'index de la première occurrence du charactère c dans la chaine s à partir de startIndex (inclus)
 // Retourne -1 si c n'est pas présent dans s
@@ -19,12 +22,24 @@ fun searchCharFrom(s : String, c : Char, startIndex : Int) : Int {
     return -1
 }
 
+fun doesAssetExist(assetPath : String, context: Context) : Boolean {
+    return try {
+        val f = context.assets.open(assetPath)
+        f.close()
+        true
+    }
+    catch (e : FileNotFoundException) {
+        false
+    }
+
+}
+
 //La fonction prend en entrée une chaine de charactère et
 //retourne un AnnotatedString (chaine de caractère contenant des informations sur le style).
 //L'AnnotatedString peut être utilisé dans un ClickableText.
 //note : La fonction écrit dans hyperlinkEntries afin d'y mettre les liens "[]()",
 //cette liste doit être initialisé (et vide) avant l'appelle de la fonction.
-fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<HyperlinkEntry>) : AnnotatedString {
+fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<HyperlinkEntry>, context : Context) : AnnotatedString {
     return buildAnnotatedString {
         var i = 0                       //index du charactère que l'on est en train de traiter dans la ligne
         var charCount = 0               //nombre de charactères de la ligne affiché sur la page
@@ -60,6 +75,16 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
                         addStyle(
                             style = SpanStyle(
                                 color = Color.Yellow
+                            ),
+                            charCount,                              //index du charactère de début dans le texte
+                            charCount + hyperlink.text.length
+                        )
+                    }
+                    //Si la destination n'existe pas
+                    else if(!doesAssetExist(hyperlink.link, context)) {
+                        addStyle(
+                            style = SpanStyle(
+                                color = Color.Red
                             ),
                             charCount,                              //index du charactère de début dans le texte
                             charCount + hyperlink.text.length
