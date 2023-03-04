@@ -1,4 +1,4 @@
-Nouvelle Constitution
+Nouvelle Constitution # imgs/portugal128x128.png
 
 La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/Gouvernement_Prov.md) et annoncé le *2 avril 1976*.
 Elle entre en vigueur le *25 avril 1976*, le même jours que les premières élections legislatives.
