@@ -3,7 +3,7 @@ Antonio de Spínola # imgs/Spinola128x128.png
 
 Nommé vice-chef de l'État-Major des forces armées à la suggestion de [Francisco da Costa Gomes](articles/costa_gomes.md) le *17 janvier 1974*. Il sera limogé en mars de la même année.
 
-En tant que représentant du *[Mouvement des Forces Armées](articles/mfa.md)* (MFA), il reçoit du président du conseil des ministres, [Marcelo Caetano](articles/Marcelo_Caetano.md) la capitulation du gouvernement.
+Le [25 avril 1974](articles/Revo_Oeillet.md), en tant que représentant du *[Mouvement des Forces Armées](articles/mfa.md)* (MFA), il reçoit du président du conseil des ministres, [Marcelo Caetano](articles/Marcelo_Caetano.md), la capitulation du gouvernement.
 
 # Contexte de son arrivée au pouvoir
 
