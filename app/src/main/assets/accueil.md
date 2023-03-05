@@ -4,7 +4,7 @@
 
 Bienvenue sur l'application EZ-Docs. Cette application est intéractive et a pour thème la transition démocratique au Portugal. Elle a été réalisé par ______________.
 
-Source et attrbution : 
+# Source et attrbution : 
 
 - Sources : 
 
