@@ -1,18 +1,17 @@
 Nouvelle Constitution
-
 Quand a été annoncée la Nouvelle Constitution ?
-25 avril 1976
-#2 avril 1976
-14 juillet 1976
+    25 avril 1976
+    #2 avril 1976
+    14 juillet 1976
 
 Qui a été le premier Président de la troisième République portugaise ?
-Mario Soares
-#Antonio Ramalho Eanes
-Antonio Spinola
+    Mario Soares
+    #Antonio Ramalho Eanes
+    Antonio Spinola
 
 Quels sont les pouvoirs du Président de la République ?
-#Nomme le 1er ministre
-Nomme les ministres du gouvernement
-#Il promulgue des décrets
-Il ne peut pas dissoudre l'Assemblée de la République
-Il ne contrôle pas les armées
+    #Nomme le 1er ministre
+    Nomme les ministres du gouvernement
+    #Il promulgue des décrets
+    Il ne peut pas dissoudre l'Assemblée de la République
+    Il ne contrôle pas les armées
