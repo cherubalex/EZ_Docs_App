@@ -1,3 +1,4 @@
+Salazar et L'État Nouveau
 Quel est la nationalité de Salazar ?
     Espagnol
     Italien
@@ -10,7 +11,7 @@ Quel est le vrai nom de Salazar ?
     Mário Soares
     Antonio Ramalho Eanes
 
-Quel poste(s)/profession(s) a eu Salazar ?
+Quels poste(s)/profession(s) a eu Salazar ?
     #Économiste
     Professeur d'Histoire-Géographie
     Président de la République

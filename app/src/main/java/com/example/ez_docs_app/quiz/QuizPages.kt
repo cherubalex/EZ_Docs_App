@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -26,8 +27,9 @@ fun QuizListPage(navController : NavHostController) {
         if (quizList != null) {
             //Ajouter des liens vers les articles un par un dans des ListItems.
             items(quizList) { quizFileName ->
+                val quizTitre = context.assets.open("quiz/$quizFileName").bufferedReader().use { it.readLine() }
                 ListItem(
-                    text = { Text(text = quizFileName) },       //todo : ajouter un titre aux quiz ?
+                    text = { Text(text = quizTitre) },       //todo : ajouter un titre aux quiz ?
                     modifier = Modifier
                         .clickable {
                             navController.navigate("quiz/$quizFileName")
@@ -50,11 +52,18 @@ fun QuizListPage(navController : NavHostController) {
 
 
 @Composable
-fun QuizPage(quizName: String?, navController: NavHostController) {
+fun QuizPage(quizName: String?, navController: NavHostController, topTitle : MutableState<String>) {
+    val context = LocalContext.current
+
     if (quizName.isNullOrBlank()) {
         Text(text = "Erreur")
         return
     }
+
+    //fixme : ici le fichier du quiz est ouvert 2 fois, c'est pas optimal.
+    //Recharger le titre
+    val quizTitle = context.assets.open("quiz/$quizName").bufferedReader().use { it.readLine() }
+    topTitle.value = quizTitle
 
     //Traiter le fichier texte et obtenir les questions
     val questions = loadQuiz("quiz/$quizName", LocalContext.current)
@@ -68,6 +77,7 @@ fun QuizPage(quizName: String?, navController: NavHostController) {
     Column {
         //Afficher la question correspondant à l'index
         if(currentQuestion.value < questions.size) {
+            Text(text = "Score : ${score.value}/${questions.size}")
             questions[currentQuestion.value].MakeComponant(
                 currentQuestion,
                 score
