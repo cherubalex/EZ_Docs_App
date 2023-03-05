@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -51,11 +52,18 @@ fun QuizListPage(navController : NavHostController) {
 
 
 @Composable
-fun QuizPage(quizName: String?, navController: NavHostController) {
+fun QuizPage(quizName: String?, navController: NavHostController, topTitle : MutableState<String>) {
+    val context = LocalContext.current
+
     if (quizName.isNullOrBlank()) {
         Text(text = "Erreur")
         return
     }
+
+    //fixme : ici le fichier du quiz est ouvert 2 fois, c'est pas optimal.
+    //Recharger le titre
+    val quizTitle = context.assets.open("quiz/$quizName").bufferedReader().use { it.readLine() }
+    topTitle.value = quizTitle
 
     //Traiter le fichier texte et obtenir les questions
     val questions = loadQuiz("quiz/$quizName", LocalContext.current)

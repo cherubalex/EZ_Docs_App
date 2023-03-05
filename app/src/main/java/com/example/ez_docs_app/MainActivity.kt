@@ -96,7 +96,7 @@ fun MainApp() {
                 composable("quiz/{nomQuiz}",
                     arguments = listOf(navArgument("nomQuiz") { type = NavType.StringType })
                 ) {
-                    QuizPage(it.arguments?.getString("nomQuiz"), navController)
+                    QuizPage(it.arguments?.getString("nomQuiz"), navController, topTitle)
                 }
             }   //Navhost
         }   //Surface
