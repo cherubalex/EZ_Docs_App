@@ -41,7 +41,7 @@ class Article(
                 .padding(start = 10.dp, end = 10.dp)
         ) {
             //Afficher le titre de l'article
-            item { Text(text = title, fontSize = 26.sp) }
+            //item { Text(text = title, fontSize = 26.sp) }
 
             //traiter l'article ligne par ligne
             items(rawContentLines) { currentLine ->
