@@ -26,8 +26,9 @@ fun QuizListPage(navController : NavHostController) {
         if (quizList != null) {
             //Ajouter des liens vers les articles un par un dans des ListItems.
             items(quizList) { quizFileName ->
+                val quizTitre = context.assets.open("quiz/$quizFileName").bufferedReader().use { it.readLine() }
                 ListItem(
-                    text = { Text(text = quizFileName) },       //todo : ajouter un titre aux quiz ?
+                    text = { Text(text = quizTitre) },       //todo : ajouter un titre aux quiz ?
                     modifier = Modifier
                         .clickable {
                             navController.navigate("quiz/$quizFileName")

@@ -22,7 +22,7 @@ fun loadQuiz(quizFileName: String, context: Context) : List<Question> {
 
     val r = mutableListOf<Question>()
 
-    var currentLine = 0
+    var currentLine = 1     //1 pour skip la ligne du titre
     while(currentLine < fileLines.size) {
         //Skip toutes les lignes vides
         while (currentLine < fileLines.size && fileLines[currentLine].trim().isBlank()) {
