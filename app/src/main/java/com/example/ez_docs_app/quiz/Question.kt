@@ -67,19 +67,22 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                 Button(
                     colors = ButtonDefaults.buttonColors(
                         backgroundColor = MaterialTheme.colors.primary,
-                        contentColor = MaterialTheme.colors.onPrimary
+                        contentColor = MaterialTheme.colors.onPrimary,
                     ),
                     onClick = {
+                        //ne pas autoriser un clique sur le bouton pendant l'animation
+                        if(haveConfirmedOnce.value) {
+                            return@Button
+                        }
+
                         var correct = true  //supposer que l'utilisateur a bon
 
                         //vérifier si les réponses sont bonnes
                         for (i in 0..colorStates.size - 1) {
                             if (reponses[i][0] == '#') {     //si c'est une bonne réponse...
-                                if (checkboxesStates[i].value) {
-                                    colorStates[i].value = 1    //la mettre en vert si elle est coché
-                                } else {
-                                    colorStates[i].value = 2    //la mettre en rouge si elle est pas coché
-                                    correct = false
+                                colorStates[i].value = 1    //la mettre en vert quoi qu'il arrive
+                                if (!checkboxesStates[i].value) {
+                                    correct = false     //Si elle n'est pas coché, la réponse à la question est incorrect
                                 }
                             } else {  //Pas de # en premier charactère (pas une bonne réponse)
                                 if (checkboxesStates[i].value) {
@@ -109,6 +112,11 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                         contentColor = MaterialTheme.colors.onSecondary
                     ),
                     onClick = {
+                        //ne pas autoriser un clique sur le bouton pendant l'animation
+                        if(!haveConfirmedOnce.value) {
+                            return@Button
+                        }
+
                         println(checkboxesStates.size)
                         //"oublier" les trucs remember
                         haveConfirmedOnce.value = false

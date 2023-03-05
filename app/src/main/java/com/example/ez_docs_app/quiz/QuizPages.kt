@@ -77,6 +77,7 @@ fun QuizPage(quizName: String?, navController: NavHostController, topTitle : Mut
     Column {
         //Afficher la question correspondant à l'index
         if(currentQuestion.value < questions.size) {
+            Text(text = "Score : ${score.value}/${questions.size}")
             questions[currentQuestion.value].MakeComponant(
                 currentQuestion,
                 score
