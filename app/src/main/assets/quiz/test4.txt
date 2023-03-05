@@ -11,7 +11,7 @@ Qui a été le premier Président de la troisième République portugaise ?
 
 Quels sont les pouvoirs du Président de la République ?
     #Nomme le 1er ministre
-    Nomme les ministres du gouvernement
+    #Nomme les ministres du gouvernement
     #Il promulgue des décrets
     Il ne peut pas dissoudre l'Assemblée de la République
     Il ne contrôle pas les armées
