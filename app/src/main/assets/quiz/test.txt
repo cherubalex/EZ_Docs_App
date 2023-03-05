@@ -4,9 +4,22 @@ Quel est la nationalité de Salazar ?
     Congolais
     #Portugais
 
+Quel est le vrai nom de Salazar ?
+    Marcelo Caetano
+    #António de Oliveira
+    Mário Soares
+    Antonio Ramalho Eanes
+
+Quel poste(s)/profession(s) a eu Salazar ?
+    #Économiste
+    Professeur d'Histoire-Géographie
+    Président de la République
+    #Ministre des Finances
+    #Président du Conseil
+    Député
+
 Qui est le successeur de Salazar ?
-    #Marcelo C.
-    Bill Gates
-    Marcel
-    Oui-oui
-    Jeff Bezos
+    Antonio Ramalho Eanes
+    Mário Soares
+    #Marcelo Caetano
+    Vasco Gonçalves
