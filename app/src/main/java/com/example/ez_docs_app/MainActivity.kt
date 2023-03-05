@@ -59,7 +59,8 @@ fun MainApp() {
         topBar = {
             TopAppBar(
                 elevation = 4.dp,
-                backgroundColor = Purple500
+                backgroundColor = MaterialTheme.colors.primary,
+                contentColor = MaterialTheme.colors.onPrimary
             ) {
                 Text(text = topTitle.value, fontSize = 24.sp)
             }
