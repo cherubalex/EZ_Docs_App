@@ -7,6 +7,7 @@ import androidx.compose.foundation.text.ClickableText
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
@@ -26,7 +27,11 @@ class Article(
     //note : le composable créé en lui-même n'est pas scrollable, il faut donc que le parent
     //       de celui-ci gère le scrolling.
     @Composable
-    fun MakeComponent(navController: NavHostController) {
+    fun MakeComponent(navController: NavHostController, topTitle : MutableState<String>? = null) {
+        if(topTitle != null) {
+            topTitle.value = title
+        }
+
         //"Découper" l'article ligne par ligne.
         val rawContentLines = rawContent.split("\n")
 

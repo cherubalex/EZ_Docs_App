@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -47,12 +48,13 @@ fun ArticleListPage(navController : NavHostController) {
 //Affiche le contenu d'un article.
 //nomArticle correspond au nom du fichier tel que son chemin est "assets/articles/{nomArticle}"
 @Composable
-fun ArticlesPage(navController : NavHostController, nomArticle : String?) {
+fun ArticlesPage(navController : NavHostController, nomArticle : String?, topTitle : MutableState<String>) {
     val context = LocalContext.current
     if(nomArticle.isNullOrBlank()) {
-        getArticleWithName("null", context).MakeComponent(navController)
+        getArticleWithName("null", context).MakeComponent(navController, topTitle)
     }
     else {
-        getArticleWithName(nomArticle, context).MakeComponent(navController)
+        val article = getArticleWithName(nomArticle, context)
+        article.MakeComponent(navController, topTitle)
     }
 }

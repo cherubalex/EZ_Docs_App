@@ -74,16 +74,25 @@ fun MainApp() {
             color = MaterialTheme.colors.background
         ) {
             NavHost(navController, startDestination = "home") { //Permet de "choisir"/"délimiter" les pages de l'application
-                composable("home") { HomePage(navController) }
+                composable("home") {
+                    topTitle.value = "Accueil"
+                    HomePage(navController)
+                }
 
-                composable("articlelist") { ArticleListPage(navController) }
+                composable("articlelist") {
+                    topTitle.value = "Cours"
+                    ArticleListPage(navController)
+                }
                 composable("articles/{nomArticle}",
                     arguments = listOf(navArgument("nomArticle") { type = NavType.StringType })
                 ) {
-                    ArticlesPage(navController = navController, nomArticle = it.arguments?.getString("nomArticle"))
+                    ArticlesPage(navController, nomArticle = it.arguments?.getString("nomArticle"), topTitle)
                 }
 
-                composable("quizlist") { QuizListPage(navController) }
+                composable("quizlist") {
+                    topTitle.value = "Quiz"
+                    QuizListPage(navController)
+                }
                 composable("quiz/{nomQuiz}",
                     arguments = listOf(navArgument("nomQuiz") { type = NavType.StringType })
                 ) {
