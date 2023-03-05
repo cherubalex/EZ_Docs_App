@@ -48,6 +48,25 @@ fun lineToAnnotatedString(line : String, hyperlinkEntries : MutableList<Hyperlin
         var boldBegin = -1              //si un premier '*' est rencontré, l'index du charactère est affecté à cet variable.
         var doBold = false              //true si un premier '*' est rencontré. Repassé sur false quand un deuxième est rencontré.
 
+        //Ajouter (ou non) un alinéa
+        if(line.length > 0) {
+            //Ajouter un alinéa si le paragraphe commence par une majuscule
+            if(line[i].code in 65..90) {
+                append("        ")  //8 espaces pour faire un alinéa
+                charCount += 8
+            }
+            //Ajouter un alinéa si le paragraphe commence par "[<MAJ>" ou "*<MAJ>"
+            else if((line[i] == '[' || line[i] == '*') && line[i+1].code in 65..90) {
+                append("        ")  //8 espaces pour faire un alinéa
+                charCount += 8
+            }
+            //mais pas s'il commence par "\["
+            else if(line[i] == '\\' && line[i+1] == '[') {
+                i++     //skip le '\' sans ajouter d'alinéa
+            }
+        }
+
+        //traiter le texte
         while(i < line.length) {
             val c = line[i]
             if(c == '[') {      //lien ?

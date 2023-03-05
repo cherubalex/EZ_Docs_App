@@ -1,10 +1,10 @@
 Nouvelle Constitution # imgs/portugal128x128.png
 
 La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/Gouvernement_Prov.md) et annoncée le *2 avril 1976*.
-Elle entre en vigueur le *25 avril 1976*, le même jours que les premières élections legislatives.
-Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/antonio_eanes.md) devient le premier président de la IIIème République portugaise. [Mario Soares](articles/mario_soares.md) est choisi comme Premier ministre.
+Elle entre en vigueur le *25 avril 1976*, le même jours que les premières élections législatives.
+Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/antonio_eanes.md) devient le premier président de la troisième République portugaise. [Mario Soares](articles/mario_soares.md) est choisi comme Premier ministre.
 
-# Organisation de la IIIème République
+# Organisation de la troisième République
 
 -Le *Président de la République* est élu au scrutin uninominal majoritaire (cad s’il a plus de 50% des voix au 1er tour il est directement élu, sinon un 2ème tour à lieu avec les 2 meilleurs) par les citoyens pour un mandat de 5 ans. Il nomme le 1er ministre et, sur conseil de celui-ci, nomme le gouvernement. Il peut également dissoudre l’assemblée de la république et il contrôle les armées. Il promulgue des décrets.
 
