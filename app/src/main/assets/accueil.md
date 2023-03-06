@@ -2,15 +2,45 @@
 
 
 
-Bienvenue sur l'application EZ-Docs. Cette application est intéractive et a pour thème la transition démocratique au Portugal. Elle a été réalisé par ______________.
+Bienvenue sur l'application EZ-Docs. Cette application intéractive a pour thème la transition démocratique au Portugal. Elle a été réalisé par ______________.
 
-# Source et attribution : 
+# Sources :
 
-- Sources : 
+*L'histoire du Portugal* par *Bourdon Albert Alain* et *Léonards Yves* (2019)
+Revue *L'Histoire* : collection d'Histoire N°063 *“Portugal, l’empire oublié”* (2014)
+Manuel scolaire *Histoire-géographie géopolitique et sciences politiques* édition Hachette (2019)
 
-- Attributions :
 
-Sources des images :
+https://digitarq.arquivos.pt/details?id=3886687
+https://manuelnumeriquemax.belin.education/hggsp-premiere/topics/hggsp-th1-axe2-064-a_au-portugal-la-revolution-des-oeillets-tournant-democratique
+https://www.ebiografia.com/antonio_de_oliveira_salazar/
+https://www.geo.fr/histoire/1968-1976-la-longue-marche-vers-la-democratie-au-portugal-212633
+https://www.ina.fr/ina-eclaire-actu/1974-la-revolution-des-oeillets-au-portugal
+https://www.larousse.fr/encyclopedie/divers/r%C3%A9volution_des_%C5%93illets/181931
+https://www.lefigaro.fr/histoire/archives/revolution-des-oeillets-il-y-a-45-ans-un-putsch-abolissait-la-dictature-au-portugal-20190424
+https://www.lemonde.fr/archives/article/1974/05/02/la-junte-redoute-des-troubles-pendant-la-celebration-du-1er-mai_3143218_1819218.html
+https://www.lemonde.fr/disparitions/article/2005/06/18/vasco-goncalves-ancien-premier-ministre-portugais_663701_3382.html
+https://www.matierevolution.fr/spip.php?article117
+https://www.maxicours.com/se/cours/l-etat-nouveau-le-portugal-de-salazar/
+https://www.touteleurope.eu/fonctionnement-de-l-ue/biographie-mario-soares-1924-2017/
+https://www.universalis.fr/encyclopedie/antonio-ribeiro-de-spinola/
+
+https://en.wikipedia.org/wiki/Armed_Forces_Movement
+https://en.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
+https://fr.wikipedia.org/wiki/Constitution_portugaise_de_1976
+https://fr.wikipedia.org/wiki/%C3%89lections_constituantes_portugaises_de_1975
+https://fr.wikipedia.org/wiki/Estado_Novo_(Portugal)
+https://fr.wikipedia.org/wiki/Junta_de_Salva%C3%A7%C3%A3o_Nacional
+https://fr.wikipedia.org/wiki/Parti_socialiste_(Portugal)
+https://fr.wikipedia.org/wiki/Pr%C3%A9sident_de_la_R%C3%A9publique_portugaise
+https://fr.wikipedia.org/wiki/R%C3%A9volution_des_%C5%92illets
+https://fr.wikipedia.org/wiki/Vasco_dos_Santos_Gon%C3%A7alves
+https://pt.wikipedia.org/wiki/Marcello_Caetano
+https://pt.wikipedia.org/wiki/M%C3%A1rio_Soares
+https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_de_25_de_Abril_de_1974
+https://pt.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
+
+# Images
 
 Salazar : https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano1/n12021/bios/lidpolitica/aos
 

@@ -17,3 +17,10 @@ Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/12_antonio_e
 -Le *tribunal constitutionnel* vérifie si les lois proposées par le gouvernement respectent la Constitution. Il peut être saisi par le Premier ministre.
 
 -Le *tribunal des comptes* contrôle les dépenses publiques de la République du Portugal.
+
+
+# Encrage à l'Europe de la troisième République
+
+[Mário Soares](articles/10_mario_soares.md) accède à la fonction de Premier Ministre de *1976 à 1978* et de *1983 à 1985*. En *1977*, il entame les négociations afin d'entrer dans *la Communauté économique européenne* (CEE). Il met notamment en place des réformes afin de rendre le secteur agricole Portugais plus compétitif à l'échelle Européenne.
+En *1983*, une série de mesure le permet de rétablire l'économie au Portugal ce qui va permettre de facilité son entrée sur le marché Européen.
+Enfin, le *1er janvier 1986*, le Portugal *entre officiellement dans la CEE*.
