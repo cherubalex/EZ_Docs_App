@@ -4,7 +4,7 @@
 
 Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisé dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisé par ______________.
 Pour accéder aux *articles* décrivant les différents éléments ayant influencé celle-ci, vous pouvez cliquer sur le bouton *"Cours"* sur la barre de navigation inférieure.
-Après avoir pris connaissance des articles, vous pouvez essayé de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
+Après avoir pris connaissance des articles, vous pouvez essayer de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
 
 # Outils :
 La création de cette application n'aurait pas été possible sans les outils ayant servit à sa réalisation :
