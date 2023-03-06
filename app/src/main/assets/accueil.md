@@ -2,15 +2,29 @@
 
 
 
-Bienvenue sur l'application EZ-Docs. Cette application intéractive a pour thème la transition démocratique au Portugal. Elle a été réalisé par ______________.
+Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisé dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisé par ______________.
+Pour accéder aux *articles* décrivant les différents éléments ayant influencé celle-ci, vous pouvez cliquer sur le bouton *"Cours"* sur la barre de navigation inférieure.
+Après avoir pris connaissance des articles, vous pouvez essayé de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
+
+# Outils :
+La création de cette application n'aurait pas été possible sans les outils ayant servit à sa réalisation :
+
+-*Android Studio*, *Jetpack Compose* et *navigation-compose* par Google.
+-*InteliJ Idea* et *Kotlin* par Jetbrains.
+-*Visual Studio Code* par Microsoft.
+-*Git* et *Github*.
+-Tous les projets ayant servi de base à ceux cités ci-dessus.
 
 # Sources :
+Les informations du contenu des articles présents dans cette application proviennent de multiples ouvrages ou sources internets .
 
+ *Ouvrages :*
 *L'histoire du Portugal* par *Bourdon Albert Alain* et *Léonards Yves* (2019)
 Revue *L'Histoire* : collection d'Histoire N°063 *“Portugal, l’empire oublié”* (2014)
 Manuel scolaire *Histoire-géographie géopolitique et sciences politiques* édition Hachette (2019)
 
 
+ *Sources internets :*
 https://digitarq.arquivos.pt/details?id=3886687
 https://manuelnumeriquemax.belin.education/hggsp-premiere/topics/hggsp-th1-axe2-064-a_au-portugal-la-revolution-des-oeillets-tournant-democratique
 https://www.ebiografia.com/antonio_de_oliveira_salazar/
@@ -25,6 +39,7 @@ https://www.maxicours.com/se/cours/l-etat-nouveau-le-portugal-de-salazar/
 https://www.touteleurope.eu/fonctionnement-de-l-ue/biographie-mario-soares-1924-2017/
 https://www.universalis.fr/encyclopedie/antonio-ribeiro-de-spinola/
 
+ *Wikipedia :*
 https://en.wikipedia.org/wiki/Armed_Forces_Movement
 https://en.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
 https://fr.wikipedia.org/wiki/Constitution_portugaise_de_1976
@@ -40,7 +55,9 @@ https://pt.wikipedia.org/wiki/M%C3%A1rio_Soares
 https://pt.wikipedia.org/wiki/Revolu%C3%A7%C3%A3o_de_25_de_Abril_de_1974
 https://pt.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
 
-# Images
+
+# Images d'illustrations :
+Des images d'illustrations sont affichées dans certains articles. Voici une liste des liens vers celles-ci.
 
 Salazar : https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano1/n12021/bios/lidpolitica/aos
 

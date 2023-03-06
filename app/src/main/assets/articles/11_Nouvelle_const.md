@@ -1,12 +1,12 @@
 Nouvelle Constitution # imgs/portugal128x128.png
 
-La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/07_Gouvernement_Prov.md) et annoncée le *2 avril 1976*.
-Elle entre en vigueur le *25 avril 1976*, le même jours que les premières élections législatives.
+La nouvelle constitution a été adoptée par l'Assemblée du [Gouvernement Provisoire](articles/07_Gouvernement_Prov.md) et proclamée le *2 avril 1976*.
+Elle entre en vigueur le *25 avril 1976*, le même jour que les premières élections législatives.
 Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/12_antonio_eanes.md) devient le premier président de la troisième République portugaise. [Mario Soares](articles/10_mario_soares.md) est choisi comme Premier ministre.
 
 # Organisation de la troisième République
 
--Le *Président de la République* est élu au scrutin uninominal majoritaire (cad s’il a plus de 50% des voix au 1er tour il est directement élu, sinon un 2ème tour à lieu avec les 2 meilleurs) par les citoyens pour un mandat de 5 ans. Il nomme le 1er ministre et, sur conseil de celui-ci, nomme le gouvernement. Il peut également dissoudre l’assemblée de la république et il contrôle les armées. Il promulgue des décrets.
+-Le *Président de la République* est élu au scrutin uninominal majoritaire (c'est à dire s’il a plus de 50% des voix au 1er tour il est directement élu, sinon un 2ème tour à lieu avec les 2 meilleurs candidats) par les citoyens pour un mandat de 5 ans. Il nomme le 1er ministre et, sur conseil de celui-ci, nomme le gouvernement. Il peut également dissoudre l’assemblée de la république et il contrôle les armées. Il promulgue les décrets.
 
 -Le *Premier ministre* est nommé par le président pour une durée indéterminé. En effet, son mandat prend fin lorsque le président décide de révoquer le gouvernement ou en cas de motion de censure, ou bien en cas de problème de santé grave l’empêchant de remplir ses fonctions. Il siège au conseil d’état.
  Il a pour but de s’assurer du bon fonctionnement du gouvernement, c’est à dire coordonner et orienter les ministres dans leurs décisions et il s’assure que les relations entre le gouvernement et les autres institutions de l’état sont bonnes. De plus, il signe les décrets qui sont ensuite promulgué par le chef de l’état.
@@ -21,6 +21,6 @@ Le *14 juillet 1976*, le général [Antonio Ramalho Eanes](articles/12_antonio_e
 
 # Encrage à l'Europe de la troisième République
 
-[Mário Soares](articles/10_mario_soares.md) accède à la fonction de Premier Ministre de *1976 à 1978* et de *1983 à 1985*. En *1977*, il entame les négociations afin d'entrer dans *la Communauté économique européenne* (CEE). Il met notamment en place des réformes afin de rendre le secteur agricole Portugais plus compétitif à l'échelle Européenne.
-En *1983*, une série de mesure le permet de rétablire l'économie au Portugal ce qui va permettre de facilité son entrée sur le marché Européen.
+[Mário Soares](articles/10_mario_soares.md) accède à la fonction de Premier Ministre de *1976 à 1978* et de *1983 à 1985*. En *1977*, il entame des négociations afin d'entrer dans *la Communauté économique européenne* (CEE). Il met notamment en place des réformes afin de rendre le secteur agricole Portugais plus compétitif à l'échelle Européenne et afin de moderniser le pays.
+En *1983*, une série de mesure le permet de rétablir l'économie au Portugal ce qui va permettre de facilité son entrée sur le marché Européen.
 Enfin, le *1er janvier 1986*, le Portugal *entre officiellement dans la CEE*.

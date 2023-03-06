@@ -2,7 +2,7 @@ Francisco da Costa Gomes # imgs/Gomes128x128.png
 
 &IMG imgs/Gomes370x500.png 185 250
 
-*Francisco da Costa Gomes* est un général de l'armée portugaise qui est devenu président lors du [gouvernement provisoire](articles/07_Gouvernement_Prov.md).  Il occupe cette fonction du 30 septembre 1947 au 14 juillet 1976.
+*Francisco da Costa Gomes* est un général de l'armée portugaise qui est devenu président lors du [gouvernement provisoire](articles/07_Gouvernement_Prov.md).  Il occupe cette fonction du 30 septembre 1974 au 14 juillet 1976.
 
 # Arrivée au pouvoir
 
