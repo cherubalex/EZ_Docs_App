@@ -11,7 +11,19 @@ fun isReponseLine(line : String) : Boolean {
         return false
     }
 
+    if(line.trim()[0] == '%') {
+        return false
+    }
+
     return true
+}
+
+fun isExplainationLine(line : String) : Boolean {
+    if(line.isBlank()) {
+        return false
+    }
+
+    return (line.trim()[0] == '%')
 }
 
 fun loadQuiz(quizFileName: String, context: Context) : List<Question> {
@@ -50,8 +62,18 @@ fun loadQuiz(quizFileName: String, context: Context) : List<Question> {
             currentLine++
         }
 
+        //obtenir l'explication (s'il y en a une)
+        val explaination : String?
+        if(currentLine < fileLines.size && isExplainationLine(fileLines[currentLine])) {
+            explaination = fileLines[currentLine].trim(' ', '%')
+            currentLine++
+        }
+        else {
+            explaination = null
+        }
+
         //Ajouter la question à la liste.
-        r.add(Question(strQuestion, reponses))
+        r.add(Question(strQuestion, reponses, explaination))
     }
 
     return r

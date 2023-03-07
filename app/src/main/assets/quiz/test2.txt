@@ -18,9 +18,11 @@ Qui a mis en place cette révolution ?
     #Antonio de Spínola
     Vasco Gonçalves
     Le Parti Communiste Portugais
+  %La Révolution des Œillets est organisé par le MFA, un mouvement composé de capitaines de l’armée de terre ayant servi dans les guerres coloniales portugaises. le général Spínola est un représentant du MFA.
 
 Le MFA est principalement composé:
     D'hommes politiques
     D'habitants de colonies portugaises
     #De jeunes capitaines de l’armée de terre
     De Communistes
+  %Le MFA est composé de capitaines de l’armée de terre. En effet, à cette periode, les officiers combattant en outre-mer ont compris que les guerres coloniales sont dans une impasse politique et militaire.
