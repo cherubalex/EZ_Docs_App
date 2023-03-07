@@ -13,9 +13,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
-class Question(val strQuestion: String, val reponses: List<String>) {
+class Question(val strQuestion: String, val reponses: List<String>, val explication : String? = null) {
     //currentQuestion est dans le composable QuizPage
     //questionCount correspond au nombre de question dans la List<Question> de QuizPage
     //navController permet de retourner à la liste de questions quand l'utilisateur à répondu à toutes les questions du quiz.
@@ -28,7 +29,8 @@ class Question(val strQuestion: String, val reponses: List<String>) {
         val checkboxesStates = mutableListOf<MutableState<Boolean>>()
         val colorStates = mutableListOf<MutableState<Int>>()        // 0 : defaut , 1 : vert , 2 : rouge
         val haveConfirmedOnce = rememberSaveable { mutableStateOf(false) }
-
+        val displayExplenation = rememberSaveable { mutableStateOf(false) }
+        
         //afficher les propositions de réponses une par une
         for(i in 0..reponses.size-1) {
             //Initialiser l'état des checkbox et des couleurs de texte
@@ -53,6 +55,13 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                     }
                 )
             }
+        }
+        
+        if(displayExplenation.value && !explication.isNullOrBlank()) {
+            Text(
+                text = "Explication : $explication",
+                textAlign = TextAlign.Justify
+            )
         }
 
         Row(
@@ -94,6 +103,8 @@ class Question(val strQuestion: String, val reponses: List<String>) {
                             }
                         }
                         if (correct) score.value += 1
+                        else displayExplenation.value = true
+                        
                         haveConfirmedOnce.value = true
                     }   //onClick = {}
                 ) {
@@ -129,6 +140,8 @@ class Question(val strQuestion: String, val reponses: List<String>) {
 
                         //passer à la question suivante
                         currentQuestion.value++
+
+                        displayExplenation.value = false
                     }
                 ) {
                     Text(text = "Suivant")

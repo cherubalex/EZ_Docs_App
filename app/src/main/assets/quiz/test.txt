@@ -5,17 +5,19 @@ Quel est la nationalité de Salazar ?
     Congolais
     #Portugais
 
-Quel est le vrai nom de Salazar ?
-    Marcelo Caetano
-    #António de Oliveira
-    Mário Soares
-    Antonio Ramalho Eanes
+Quel est le nom complet de Salazar ?
+    Marcelo Caetano Salazar
+    #António de Oliveira Salazar
+    Antonio de Spínola Salazar
+    Mário Soares Salazar
+    Antonio Ramalho Salazar
 
 En quelle année a été fondé "l'État Nouveau" ?
     1926
     1928
     1932
     #1933
+  %L'État Nouveau est fondé 19 mars 1933. En effet, une constitution instaurant un nouveau régime politique est plébicité ce jour là.
 
 Quels poste(s)/profession(s) a eu Salazar ?
     #Économiste
@@ -24,9 +26,11 @@ Quels poste(s)/profession(s) a eu Salazar ?
     #Ministre des Finances
     #Président du Conseil
     Député
+  %Avant d'entamer sa carrière politique, Salazar est tout d'abord économiste. En 1926, un coup d'état a lieu et il est nommé ministre des finances. Enfin, en 1932, il est nommé président du conseil.
 
 Qui est le successeur de Salazar ?
     Antonio Ramalho Eanes
     Mário Soares
     #Marcelo Caetano
     Vasco Gonçalves
+  %Salazar est contraint de renoncer au pouvoir 25 septembre 1968 à la suite d'un accident vasculaire cérébral. C'est Marcelo Caetano qui sera choisi comme successeur.

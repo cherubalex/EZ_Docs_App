@@ -11,6 +11,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -100,9 +101,14 @@ class Article(
                     }
                 }
             },
-            style = TextStyle(color = MaterialTheme.colors.onBackground)
+            style = TextStyle(
+                color = MaterialTheme.colors.onBackground,
+                textAlign = TextAlign.Justify
+            ),
         )
+
     }
+    
 
 
     //Traiter une image et la transformer en Composable (Image)
@@ -129,7 +135,8 @@ class Article(
                     fileName = filePath,
                     width, height,
                     modifier = Modifier
-                        .width(width.dp).height(height.dp)
+                        .width(width.dp)
+                        .height(height.dp)
                 )
             }
             return

@@ -2,9 +2,9 @@
 
 
 
-Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisé dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisé par ______________.
+Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisée dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisé par ______________.
 Pour accéder aux *articles* décrivant les différents éléments ayant influencé celle-ci, vous pouvez cliquer sur le bouton *"Cours"* sur la barre de navigation inférieure.
-Après avoir pris connaissance des articles, vous pouvez essayé de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
+Après avoir pris connaissance des articles, vous pouvez essayer de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
 
 # Outils :
 La création de cette application n'aurait pas été possible sans les outils ayant servit à sa réalisation :
@@ -18,13 +18,13 @@ La création de cette application n'aurait pas été possible sans les outils ay
 # Sources :
 Les informations du contenu des articles présents dans cette application proviennent de multiples ouvrages ou sources internets .
 
- *Ouvrages :*
+*Ouvrages :*
 *L'histoire du Portugal* par *Bourdon Albert Alain* et *Léonards Yves* (2019)
 Revue *L'Histoire* : collection d'Histoire N°063 *“Portugal, l’empire oublié”* (2014)
 Manuel scolaire *Histoire-géographie géopolitique et sciences politiques* édition Hachette (2019)
 
 
- *Sources internets :*
+*Sources internets :*
 https://digitarq.arquivos.pt/details?id=3886687
 https://manuelnumeriquemax.belin.education/hggsp-premiere/topics/hggsp-th1-axe2-064-a_au-portugal-la-revolution-des-oeillets-tournant-democratique
 https://www.ebiografia.com/antonio_de_oliveira_salazar/
@@ -39,7 +39,7 @@ https://www.maxicours.com/se/cours/l-etat-nouveau-le-portugal-de-salazar/
 https://www.touteleurope.eu/fonctionnement-de-l-ue/biographie-mario-soares-1924-2017/
 https://www.universalis.fr/encyclopedie/antonio-ribeiro-de-spinola/
 
- *Wikipedia :*
+*Wikipedia :*
 https://en.wikipedia.org/wiki/Armed_Forces_Movement
 https://en.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
 https://fr.wikipedia.org/wiki/Constitution_portugaise_de_1976
@@ -59,26 +59,34 @@ https://pt.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
 # Images d'illustrations :
 Des images d'illustrations sont affichées dans certains articles. Voici une liste des liens vers celles-ci.
 
-Salazar : https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano1/n12021/bios/lidpolitica/aos
+*Salazar*
+https://www.defesa.gov.pt/pt/defesa/organizacao/comissoes/cphm/rphm/edicoes/ano1/n12021/bios/lidpolitica/aos
 
-Spinola : https://manuelnumeriquemax.belin.education/hggsp-premiere/topics/simple/hggsp-th1-axe2-064-03
+*Spinola*
+https://manuelnumeriquemax.belin.education/hggsp-premiere/topics/simple/hggsp-th1-axe2-064-03
 
-Soares : https://www.britannica.com/biography/Mario-Soares
+*Soares*
+https://www.britannica.com/biography/Mario-Soares
 
-Caetano : https://delagoabayworld.wordpress.com/2018/11/28/marcelo-caetano-anos-1970/
+*Caetano*
+https://delagoabayworld.wordpress.com/2018/11/28/marcelo-caetano-anos-1970/
 
-Gomes : https://pt.wikipedia.org/wiki/Francisco_da_Costa_Gomes
+*Gomes*
+https://pt.wikipedia.org/wiki/Francisco_da_Costa_Gomes
 
-Eanes : https://www.larousse.fr/encyclopedie/data/images/1004667-Ant%C3%B3nio_Dos_Santos_Ramalho_Eanes.jpg
+*Eanes*
+https://www.larousse.fr/encyclopedie/data/images/1004667-Ant%C3%B3nio_Dos_Santos_Ramalho_Eanes.jpg
 
-Gonçalves cours : https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/VascoGon%C3%A7alvesSpeaking_%28cropped%29.jpg/
+*Gonçalves*
+https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/VascoGon%C3%A7alvesSpeaking_%28cropped%29.jpg/
+http://www.diarioliberdade.org/archivos/Administradores/Maur%C3%ADcio/2014-04/100414_vasco.jpg
 
-Gonçalves article : http://www.diarioliberdade.org/archivos/Administradores/Maur%C3%ADcio/2014-04/100414_vasco.jpg
+*Union Nationale*
+https://en.wikipedia.org/wiki/Estado_Novo_(Portugal)
 
-Union Nationale : https://en.wikipedia.org/wiki/Estado_Novo_(Portugal)
+*MFA*
+https://pt.wikipedia.org/wiki/Movimento_das_For%C3%A7as_Armadas
 
-MFA : https://pt.wikipedia.org/wiki/Movimento_das_For%C3%A7as_Armadas
-
-Révolution des Oeillets : https://centrefrancoportugaisdotcom.files.wordpress.com/2012/04/sky20111018095528lemirea.jpg
-
-Révolution des Oeillets : https://monlisbonne.com/blog/25-avril-revolution-oeillets/
+*Révolution des Oeillets*
+https://centrefrancoportugaisdotcom.files.wordpress.com/2012/04/sky20111018095528lemirea.jpg
+https://monlisbonne.com/blog/25-avril-revolution-oeillets/

@@ -1,8 +1,8 @@
-António de Oliveira (Salazar) # imgs/Salazar128x128.png
+António de Oliveira Salazar # imgs/Salazar128x128.png
 
 &IMG imgs/Salazar900x900.jpg 320 320
 
-António de Oliveira est un économiste et professeur d'économie né le 28 avril 1889 et mort le 27 juillet 1970 peu de temps après un accident vasculaire cérébral. Il est le Président du Conseil de [l'état nouveau](articles/02_Gouvernement_Sal.md) du 5 juillet 1932 au 25 septembre 1968.
+António de Oliveira Salazar est un économiste et professeur d'économie né le 28 avril 1889 et mort le 27 juillet 1970 peu de temps après un accident vasculaire cérébral. Il est le Président du Conseil de [l'état nouveau](articles/02_Gouvernement_Sal.md) du 5 juillet 1932 au 25 septembre 1968.
 Il était opposé au communisme, au socialisme, au syndicalisme et au libéralisme. Ainsi, son régime était de nature conservateur, corporatiste et nationaliste.
 
 
