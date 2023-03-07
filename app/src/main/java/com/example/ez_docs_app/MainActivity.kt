@@ -21,9 +21,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.ez_docs_app.ui.theme.EZ_Docs_AppTheme
-import com.example.ez_docs_app.ui.theme.Purple500
 import java.util.*
 import android.os.Bundle
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +31,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             EZ_Docs_AppTheme {
+                val systemUiController = rememberSystemUiController()
+                systemUiController.setSystemBarsColor(MaterialTheme.colors.primary)
+
                 MainApp()
             }   //EZ_Docs_AppTheme
         }   //setContent
