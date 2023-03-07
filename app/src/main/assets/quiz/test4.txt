@@ -8,6 +8,7 @@ Qui a été le premier Président de la troisième République portugaise ?
     Mario Soares
     #Antonio Ramalho Eanes
     Antonio Spinola
+    %Mario Soares était le premier ministre de Eanes et Spinola était président au début des gouvernements provisoires
 
 Quels sont les pouvoirs du Président de la République ?
     #Nomme le 1er ministre
@@ -15,6 +16,7 @@ Quels sont les pouvoirs du Président de la République ?
     #Il promulgue des décrets
     Il ne peut pas dissoudre l'Assemblée de la République
     Il ne contrôle pas les armées
+    %En effet, celui-ci peut contrôler les armées, dissoudre l'Assemblée, nommer le Premier ministre et les ministres
 
 Qui était Antonio Ramalho Eanes ?
     #Le premier Président de la troisième République
