@@ -2,14 +2,14 @@
 
 
 
-Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisée dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisé par ______________.
+Bienvenue sur l'application EZ-Docs. Cette application intéractive a été réalisée dans le cadre d'un travail de recherche d'Enseignement Moral et Civique et a pour thème *la transition démocratique au Portugal*. Elle a été réalisée par ______________.
 Pour accéder aux *articles* décrivant les différents éléments ayant influencé celle-ci, vous pouvez cliquer sur le bouton *"Cours"* sur la barre de navigation inférieure.
 Après avoir pris connaissance des articles, vous pouvez essayer de répondre à des *questions* dans le but de tester vos connaissances en cliquant sur le bouton *"Quiz"*.
 
 # Outils :
 La création de cette application n'aurait pas été possible sans les outils ayant servit à sa réalisation :
 
--*Android Studio*, *Jetpack Compose* et *navigation-compose* par Google.
+-*Android Studio*, *Jetpack Compose*, *Accompanist* et *navigation-compose* par Google.
 -*InteliJ Idea* et *Kotlin* par Jetbrains.
 -*Visual Studio Code* par Microsoft.
 -*Git* et *Github*.
@@ -42,11 +42,13 @@ https://www.universalis.fr/encyclopedie/antonio-ribeiro-de-spinola/
 *Wikipedia :*
 https://en.wikipedia.org/wiki/Armed_Forces_Movement
 https://en.wikipedia.org/wiki/Vasco_Gon%C3%A7alves
+https://fr.wikipedia.org/wiki/Ant%C3%B3nio_Ramalho_Eanes
 https://fr.wikipedia.org/wiki/Constitution_portugaise_de_1976
 https://fr.wikipedia.org/wiki/%C3%89lections_constituantes_portugaises_de_1975
 https://fr.wikipedia.org/wiki/Estado_Novo_(Portugal)
 https://fr.wikipedia.org/wiki/Junta_de_Salva%C3%A7%C3%A3o_Nacional
 https://fr.wikipedia.org/wiki/Parti_socialiste_(Portugal)
+https://fr.wikipedia.org/wiki/Premier_ministre_du_Portugal
 https://fr.wikipedia.org/wiki/Pr%C3%A9sident_de_la_R%C3%A9publique_portugaise
 https://fr.wikipedia.org/wiki/R%C3%A9volution_des_%C5%92illets
 https://fr.wikipedia.org/wiki/Vasco_dos_Santos_Gon%C3%A7alves

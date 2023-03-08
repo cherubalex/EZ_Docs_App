@@ -7,7 +7,7 @@ Il était opposé au communisme, au socialisme, au syndicalisme et au libéralis
 
 
 # Contexte de son arrivée au pouvoir
-Le *28 mai 1926*, un coup d’état met fin à une république parlementaire et instaure une dictature militaire. Antonio de Oliveira entre dans la vie politique en étant nommé *ministre des finances*, cependant il démissionne au bout de quelques jours car le président ne lui a pas accordé les plein pouvoir pour mettre en œuvre les mesures économiques qu'il prévoyait.
+Le *28 mai 1926*, un coup d’état met fin à une république parlementaire et instaure une dictature militaire. Antonio de Oliveira entre dans la vie politique en étant nommé *ministre des finances*, cependant il démissionne au bout de quelques jours car le président ne lui a pas accordé les pleins pouvoirs pour mettre en œuvre les mesures économiques qu'il prévoyait.
 
 En *Avril 1928*, il redevient *ministre des finances*. Il est reconnu par le chef de l’état de l'époque, le général Óscar Carmona. Il rétablit l’équilibre des finances en moins d’un an (il est ainsi appelé le “magicien des finances”), et exige en retour de contrôler l’ensemble des dépenses ministérielles. À partir de cette date, l’influence de Salazar sur le régime est grandissante.
 En *1932*, Salazar est nommé *président du conseil*.

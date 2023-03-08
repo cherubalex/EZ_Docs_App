@@ -7,7 +7,7 @@ C'est un homme politique conservateur et une figure marquante de [l'Estado Novo]
 
 
 # Contexte de son arrivé au pouvoir 
-Salazar étant victime d'un accident vasculaire cérébrale en 1968, Marcelo Caetano est alors nommé président du Conseil le *25 septembre* de la même année.
+Salazar étant victime d'un accident vasculaire cérébral en 1968, Marcelo Caetano est alors nommé président du Conseil le *25 septembre* de la même année.
 
 # Fin de carrière
 Le *25 avril 1974* a lieu la [Révolution des Œillets](articles/04_Revo_Oeillet.md), Marcelo Caetano se réfugie à la caserne du Carmo à Lisbonne, sous la protection de la Garde Nationale républicaine. Il négocie sa reddition et remet sa démission au [général Spínola](articles/06_Antonio_Spinola.md) afin "que le pouvoir ne tombe pas dans la rue".

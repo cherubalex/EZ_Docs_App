@@ -17,7 +17,7 @@ En quelle année a été fondé "l'État Nouveau" ?
     1928
     1932
     #1933
-  %L'État Nouveau est fondé 19 mars 1933. En effet, une constitution instaurant un nouveau régime politique est plébicité ce jour là.
+  %L'État Nouveau est fondé le 19 mars 1933. En effet, une constitution instaurant un nouveau régime politique est plébicitée ce jour là.
 
 Quels poste(s)/profession(s) a eu Salazar ?
     #Économiste
@@ -33,4 +33,4 @@ Qui est le successeur de Salazar ?
     Mário Soares
     #Marcelo Caetano
     Vasco Gonçalves
-  %Salazar est contraint de renoncer au pouvoir 25 septembre 1968 à la suite d'un accident vasculaire cérébral. C'est Marcelo Caetano qui sera choisi comme successeur.
+  %Salazar est contraint de renoncer au pouvoir le 25 septembre 1968 à la suite d'un accident vasculaire cérébral. C'est Marcelo Caetano qui sera choisi comme successeur.
