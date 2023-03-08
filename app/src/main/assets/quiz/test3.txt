@@ -1,20 +1,21 @@
 Gouvernements Provisoires
-Combien de gouvernement(s) provisoire(s) y-a-t'il eu entre 1974 et 1976?
+Combien de gouvernement(s) provisoire(s) y-a-t'il eu entre 1974 et 1976 ?
     1
     5
     #6
     15
 
-A quelle date la nouvelle constitution a été adoptée ?
+À quelle date la nouvelle constitution a été adoptée ?
     #25 avril 1976
     1er mai 1974
     19 septembre 1975
     25 avril 1975
 
-Combien de Président y-a-t'il eu durant ces gouvernements ?
+Combien de Président(s) y-a-t'il eu durant ces gouvernements ?
+    0
+    #2
     5
     6
-    #2
     9
 
 Qui sont-ils ?
@@ -22,4 +23,4 @@ Qui sont-ils ?
     Vasco Gonçalves
     Salazar
     #Francisco da Costa Gomes
-    %En effet, Vasco Gonçalves n'a été "que" premier ministe et Salazar avait mis en place une dictature
+    %En effet, Vasco Gonçalves n'a été "que" premier ministe et Salazar est à la tête de l'État Nouveau.
